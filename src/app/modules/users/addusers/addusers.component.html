@@ -1,0 +1,114 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header></app-header>
+
+        <!-- <div class="row ">
+            <div class="title">
+                <h3>Add User</h3>
+                <h2>Welcome to Enablex Hire!</h2>
+            </div>
+        </div> -->
+
+        <div class="row sub-title">
+            <!-- <div class="col-md-4 text">
+                <h5> This is a list of all Positions created in your Organisation.</h5>
+            </div> -->
+
+
+            <div class="col-md-11 mt-4 " style="margin-left: 19px;">
+
+                <a routerLink="/user" class="d-inline-flex align-items-center back text-gray font-weight-bold">
+                    <i class="fa fa-angle-left circle-40 bg-white mr-5 left-profile" style="margin-right: 10px;"></i>
+                    Users
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- <div class="col ">
+            <h2 routerLink="/user" style="margin-top:10px; margin-left: 970px; cursor: pointer">
+                <i class="fa fa-angle-left circle-40 bg-white mr-2 left-profile"></i> Users
+            </h2>
+        </div> -->
+
+        <div class="shadow-4 ml-2">
+            <form #addCustomerForm="ngForm">
+
+
+                <div class="row  mx-0">
+
+                    <div class="col-md-6 adduser">
+                        <mat-form-field appearance="outline">
+                            <mat-label> First Name</mat-label>
+                            <input matInput id="firstName" name="firstName" class="form-control" #firstName='ngModel'
+                                [(ngModel)]="addUserParams.firstName" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-6 adduser">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Last Name</mat-label>
+                            <input matInput id="lastName" class="form-control" #lastName='ngModel' name="lastName"
+                                [(ngModel)]="addUserParams.lastName" required>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="row mx-0">
+
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput id="email" class="form-control" #email='ngModel' required name="email"
+                                type="email" [(ngModel)]="addUserParams.email" ngModel email="true"
+                                pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
+                            <mat-error *ngIf="email.errors &&(email.touched || email.dirty)">
+                                Please Enter Valid Email
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+
+
+                    <div class="col-md-6 d-grid gap-3">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Password </mat-label>
+                            <input matInput id="Password" name="password" class="form-control" required="true">
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <div class="row mx-0 d-grid gap-3">
+                    <div class="col-md-12 mt-0 pt-0">
+                        <mat-form-field appearance="outline" >
+                            <mat-label> User Type</mat-label>
+                            <mat-select name="user" id="user">
+                                <mat-option [value]='1003'>Admin Executive</mat-option>
+                                <mat-option [value]='1007'>Associated Executive</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </form>
+            <div class="row">
+                <div class="col-md-3 mt-2"  style="margin-left:12px ;" >
+                    <button mat-raised-button color="primary" (click)="createUser()"
+                        [disabled]="addCustomerForm.invalid">
+                        <span *ngIf="!addUserParams.userDetailsId">Submit </span>
+                        <span *ngIf="addUserParams.userDetailsId">Update </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- <span *ngIf="addUserParams.businessId">Update</span></button> -->
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>

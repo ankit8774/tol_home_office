@@ -1,0 +1,144 @@
+<!-- <ngx-loading [show]="loading"></ngx-loading> -->
+<mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <app-header></app-header>
+    <div class="main-content">
+        <!-- <div class="row">
+            <div class="title">
+                <h3>Users List(7)</h3>
+                <h2>Welcome to Enablex Hire!</h2>
+            </div>
+        </div>   -->
+
+        <div class="row sub-title">
+            <div class="col-md-8 text">
+
+                <h5>This is a listing of all Users who are registed under this company. You can add/edit , activate and
+                    suspend users.</h5>
+            </div>
+            <div class="col-md-4">
+                <button class="float-right" mat-raised-button routerLink="/addUser">
+                    Add User
+                </button>
+            </div>
+        </div>
+
+        <!-- <div *ngIf="loading" class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+        </div>
+        </div> -->
+
+
+        <div class="row mx-0">
+            <div class="col-md-3">
+
+                <mat-form-field appearance="outline">
+                    <mat-label> User Type </mat-label>
+                    <mat-select>
+                        <mat-option value="aut">--All User Type--</mat-option>
+                        <mat-option value="admin">Adminstrator</mat-option>
+                        <mat-option value="exe">Executive</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-3 ">
+                <mat-form-field appearance="outline">
+                    <mat-label> Status </mat-label>
+                    <mat-select>
+
+                        <mat-option value="show all" name="all">--Show All--</mat-option>
+                        <mat-option value="Active">Active</mat-option>
+                        <mat-option value="suspended">Suspended</mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-3 ">
+                <mat-form-field appearance="outline">
+                    <mat-label> Search Criteria</mat-label>
+                    <mat-select>
+                        <mat-option value='show all crit'>--Show All--</mat-option>
+                        <mat-option value="Fn">First Name</mat-option>
+                        <mat-option value='ls'>Last Name</mat-option>
+                        <mat-option value='email'>Email</mat-option>
+
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3 my-1  ">
+                <button class="go" mat-raised-button>Go</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row sub-title">
+        <div class="col-md-6 text total">
+            <h5>Total: 7</h5>
+        </div>
+    </div>
+
+
+    <div class="col-12 padd_colx5 pad_20">
+        <div class="table-responsive">
+
+            <table class="table table-striped" datatable>
+                <!-- <colgroup>
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                </colgroup> -->
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th> Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Added Date</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+
+                <tbody #empty>
+                    <tr *ngFor="let u of userList  let i=index ">
+                        <td>{{i+1}}</td>
+                        <td>Ankit</td>
+                        <td>ankit@gmail.com</td>
+                        <td>Front-End Developer</td>
+                        <td>05-Dec-2022</td>
+                        <td>
+
+                            <button mat-raised-button [matMenuTriggerFor]="menu">Action</button>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item routerLink="/EditUser">Edit </button>
+                                <button mat-menu-item (click)="alertConfirmation()" > Suspend</button>
+                            </mat-menu>
+
+                            
+                            <!-- <ul class="list-inline">
+                                <li>
+                                    <button mat-raised-button routerLink="/addUser">Edit</button> &nbsp;
+                                    <button mat-raised-button (click)="suspend">Suspend</button> &nbsp;
+                                </li>
+                            </ul> -->
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+            <ng-template #no_data_templ *ngIf="searchText==null"> NO DATA FOUND</ng-template>
+
+            <pagination-controls class="custom-pagination" (pageChange)="pageChangeEvent($event)">
+            </pagination-controls>
+
+        </div>
+    </div>
+
+
+   

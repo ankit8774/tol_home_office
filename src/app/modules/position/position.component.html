@@ -1,0 +1,153 @@
+<!-- <ngx-loading [show]="loading"></ngx-loading> -->
+<mat-drawer-container>
+  <mat-drawer mode="side" opened="true">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+
+  <app-header></app-header>
+
+  
+  <div class="main-content">
+    <!-- <div class="row">
+
+      <div class="title">
+        <h3>Position (6)</h3>
+        <h2>Welcome to Enablex Hire!</h2>
+      </div>
+
+    </div> -->
+
+    <div class="row sub-title">
+      <div class="col-md-6 text">
+        <h5> This is a list of all Positions created in your Organisation.</h5>
+      </div>
+
+      <div class="col-md-6">
+
+        <button class="float-right" mat-raised-button routerLink="/addPosition">
+          Add New Position
+        </button>
+      </div>
+    </div>
+
+
+    <!-- <div class="col-md-6">
+    <div *ngIf="loading" class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    </div> -->
+
+
+
+    <div class="row  mx-0">
+
+      <div class="col-md-3">
+        <mat-form-field appearance="outline">
+          <mat-label>Position Status </mat-label>
+          <mat-select name="businessId" id="businessId">
+            <mat-option value="a1">--All Position--</mat-option>
+            <mat-option value="1">Open Position</mat-option>
+            <mat-option value="2">Closed Position</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-3 ">
+        <mat-form-field appearance="outline">
+          <mat-label> Executives </mat-label>
+          <mat-select name="locationName" id="locationName">
+            <input type="search" class="myInput">
+            <mat-option value="a">--All Executives--</mat-option>
+            <mat-option value="1">Exe-1</mat-option>
+            <mat-option value="2">Exe-2</mat-option>
+            <mat-option value="3">Exe-3</mat-option>
+            <mat-option value="3">Exe-3</mat-option>
+            <mat-option value="5">Exe-5</mat-option>
+            <mat-option value="6">Exe-6</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-3 ">
+        <mat-form-field appearance="outline">
+          <mat-label> Clients</mat-label>
+          <mat-select name="user" id="user" [(ngModel)]='searchText'>
+            <input type="search" style="border: 0px;" class="myInput">
+            <mat-option value=''>--All Users--</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-3 my-1  ">
+        <button class="go" mat-raised-button>Go</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row sub-title">
+    <div class="col-md-6 text">
+      <h5 style="margin-left: 18px;">Total: 7</h5>
+    </div>
+  </div>
+
+  <!-- <p><b>Total : 7</b></p> -->
+
+  <div class="col-12 padd_colx5 pad_20">
+    <div class="table-responsive">
+
+      <table class="table table-striped">
+        <colgroup>
+          <!-- <col style="width: 20%;">
+              <col style="width: 20%;">
+              <col style="width: 20%;">
+              <col style="width: 20%;">
+              <col style="width: 20%;"> -->
+        </colgroup>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Position</th>
+            <th>Start Date</th>
+            <th>Close Date</th>
+            <th>Screening</th>
+            <th>Interview</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+
+        <tbody #empty>
+          <ng-container *ngIf="( locationList ) as result">
+
+            <tr *ngFor="let u of locationList  let i = index">
+
+              <td>{{i+1}}</td>
+              <td>
+                <a routerLink="/profilePosition" title="Position Profile" style="color: #3490dc;
+                    text-decoration: none;
+                    background-color: transparent"> Front End Developer </a>
+              </td>
+              <td>05-Dec-2022</td>
+              <td>10-Dec-2022</td>
+              <td>1/7</td>
+              <td></td>
+              <td>Open</td>
+              <td>Archive</td>
+
+          </ng-container>
+
+        </tbody>
+
+      </table>
+
+      <pagination-controls class="custom-pagination" (pageChange)="pageChangeEvent($event)">
+      </pagination-controls>
+
+    </div>
+  </div>
+
+<!-- <app-footer></app-footer> -->
+</mat-drawer-container>

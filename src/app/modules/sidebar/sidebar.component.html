@@ -1,0 +1,60 @@
+<div class="top-bar">
+    <div class="logo">
+        <a routerLink="/admin/dashboard">
+            <img src="https://hire.enablex.io/branding/1659508373.jpg" class="img-fluid" style="width :200px">
+        </a>
+    </div>
+</div>
+
+<header class="side-header light-skin opened-menu" style="width :252px !important;">
+    <div class="menu-scroll">
+        <div class="side-menus">
+            <nav>
+                <ul class="list-group">
+                    <li class="">
+                        <a class="list-group-item list-group-item-action" routerLink="/dashboard" title="Dashboard"
+                            routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: false}">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action" routerLink="/position" title="Business"
+                            routerLinkActive="active-link">
+                            <i class="fa fa-briefcase" style="font-size:16px"></i>
+                            <span>Position</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-group-item list-group-item-action" routerLink="/client" title="Business"
+                            routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: false}">
+                            <i class="fa fa-life-ring"></i>
+                            <span>Clients</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="list-group-item list-group-item-action" routerLink="/user" title="Users"
+                            routerLinkActive="active-link">
+                            <i class="fa fa-users"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a class="list-group-item list-group-item-action" routerLink="/feedBack" title="Users" routerLinkActive="active-link">
+                            <i class="fa fa-comments-o"></i>
+                            <span>FeedBack</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a class="list-group-item list-group-item-action" (click)="logout()">
+                            <i class="fa fa-sign-out"></i>
+                            <span> Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
