@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Tol_home": {
+    "Tol_home_office": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -82,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Tol_home:build:production"
+              "browserTarget": "Tol_home_office:build:production"
             },
             "development": {
-              "browserTarget": "Tol_home:build:development"
+              "browserTarget": "Tol_home_office:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Tol_home:build"
+            "browserTarget": "tol_home_office:build"
           }
         },
         "test": {
@@ -117,5 +117,5 @@
       }
     }
   },
-  "defaultProject": "Tol_home"
+  "defaultProject": "tol_home_office"
 }
