@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { addUserModel } from 'src/app/models/AdminModel';
+import { ServicesService } from 'src/app/shared/services.service';
 
 @Component({
   selector: 'app-addusers',
@@ -19,7 +20,7 @@ export class AddusersComponent implements OnInit {
   location: any;
   activeRoute: any;
 
-  constructor(    ){this.addUserParams=new addUserModel}
+  constructor(private headerTitleService:ServicesService  ){this.addUserParams=new addUserModel  }
     
 
   keyPress(event: any) {
@@ -89,6 +90,7 @@ export class AddusersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.headerTitleService.setTitle('Add User')
 
     // this.activeRoute.params.subscribe((params: { [x: string]: any; })=>{
     //   this.addUserParams.userDetailsId = params['userDetailsId']

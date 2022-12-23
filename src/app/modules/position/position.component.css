@@ -9,11 +9,19 @@
   overflow-x:hidden;
 }
 
-.mat-drawer-container {
+mat-drawer-container {
   background-color: #F6F9FA;
   color: rgba(0, 0, 0, .87);
-  height: 100%;
+  height: 91%;
  
+}
+mat-drawer {
+  width: 255px;   
+  margin-top: 0px;
+}
+mat-drawer-content {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 table {

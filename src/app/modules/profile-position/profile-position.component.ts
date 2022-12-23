@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from 'src/app/shared/services.service';
 
 @Component({
   selector: 'app-profile-position',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePositionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerTitleService:ServicesService) { }
 
   ngOnInit(): void {
+    this.headerTitleService.setTitle('Full Stack Developer')
   }
 
 }

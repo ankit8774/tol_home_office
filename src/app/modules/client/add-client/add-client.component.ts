@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from 'src/app/shared/services.service';
 
 @Component({
   selector: 'app-add-client',
@@ -10,9 +11,10 @@ export class AddClientComponent implements OnInit {
   loading: boolean = false;
  
   
-  constructor() { }
+  constructor(private headerTitleService:ServicesService) { }
 
   ngOnInit(): void {
+    this.headerTitleService.setTitle('Add Client')
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from 'src/app/shared/services.service';
 
 @Component({
   selector: 'app-profile-invite',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileInviteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerTitleService:ServicesService) { }
+
+  selectedFile: any = null;
+
+  onFileSelected(event: any): void {
+      this.selectedFile = event.target.files[0] ?? null;
+     
+        
+      }
+  
+  
 
   ngOnInit(): void {
+    this.headerTitleService.setTitle('Full Stack Developer')
   }
 
 }

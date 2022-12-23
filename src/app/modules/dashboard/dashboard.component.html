@@ -2,185 +2,232 @@
     <mat-drawer mode="side" opened="true">
         <app-sidebar></app-sidebar>
     </mat-drawer>
+    <mat-drawer-content>
 
-    <app-header></app-header>
-    
-    <!-- <mat-drawer-content> -->
-    <!-- <ngx-loading [show]="loading"></ngx-loading> -->
-    <div class="main-content">
+        <app-header></app-header>
 
+        <!-- <ngx-loading [show]="loading"></ngx-loading> -->
+        <!-- <div class="main-content"> -->
 
-        <div class="row">            
-            <div class="col-md-6">
-
-                <div class="shadow-4">
-                <div class="tab">
-                    <mat-tab-group animationDuration="0ms" style="width: 470px;" class="mat-tab-header-pagination-disabled">
+        <div class="row">
+            <div class="col-md-6" style="">
+                <div class="mb-7 bg-white shadow-8 p-20 rounded mb-4 dashboard-screen" style="">
+                    <mat-tab-group animationDuration="0ms" class="mat-tab-header-pagination-disabled">
                         <mat-tab label="OverAll Usage"></mat-tab>
                         <mat-tab label="This Month"></mat-tab>
                         <mat-tab label="Last Month"></mat-tab>
                     </mat-tab-group>
-                    </div>
-
-                    <div class="row sha-1">
-                        <!-- 1 -->
-                        <div class="col-md-4">
-                            <a href="https">
-                                <div class="mt-5 text-center">
-                                    <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2"><img
-                                            src="assets/image/position-circle.png"></div>
-                                    <p class="font-size-4 font-size-16 text-black-2 mb-2">Positions
-                                    </p>
-                                    <h5
-                                        class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                        <span class="counter dashboard-count">41</span>
-                                    </h5>
-                                </div>
-                            </a>
+                    <div id="myTabContent" class="tab-content">
+                        <div id="overall" role="tabpanel" aria-labelledby="overall-tab"
+                            class="tab-pane fade active show">
+                            <div class="row">
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
+                                      >
+                                        <div class="mt-5 text-center">
+                                            <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="https://hire.enablex.io/images/position-circle.png"></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Positions
+                                            </p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter dashboard-count">3</span></h5>
+                                        </div>
+                                    </a></div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
+                                      >
+                                        <div class="mt-5 text-center">
+                                            <div class="text-orange bg-orange-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="https://hire.enablex.io/images/screenings-circle.png"></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Screening Done
+                                            </p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter">9</span></h5>
+                                        </div>
+                                    </a></div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4" style=""><a
+                                      >
+                                        <div class="mt-5 text-center">
+                                            <div class="text-pink bg-pink-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="assets/image/interviews-circle.png" style="">
+                                            </div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Interviews
+                                                Done</p>
+                                            <h5 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1"
+                                                style=""><span class="counter">1</span></h5>
+                                        </div>
+                                    </a></div>
+                            </div>
                         </div>
-                      
-                        <div class="col-md-4">
-                            <a href="http">
-                                <div class="mt-5 text-center">
-                                    <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2">
-                                        <img src="assets/image/screenings-circle.png">
-                                    </div>
-                                    <p class="font-size-4 font-size-16 text-black-2 mb-2">Screening Done </p>
-                                    <h5
-                                        class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                        <span class="counter dashboard-count">41</span>
-                                    </h5>
-                                </div>
-                            </a>
+                        <div id="thismonth" role="tabpanel" aria-labelledby="thismonth-tab" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
+                                                                          <div class="mt-5 text-center">
+                                            <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="assets/image/position-circle.png"></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Positions
+                                            </p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter">3</span></h5>
+                                        </div>
+                                    </a></div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
+                                      >
+                                        <div class="mt-5 text-center">
+                                            <div class="text-orange bg-orange-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="https://hire.enablex.io/images/screenings-circle.png"></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Screening Done
+                                            </p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter">7</span></h5>
+                                        </div>
+                                    </a></div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
+                                      >
+                                        <div class="mt-5 text-center">
+                                            <div class="text-pink bg-pink-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="assets/image/position-circle.png"></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Interviews
+                                                Done</p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter">0</span></h5>
+                                        </div>
+                                    </a></div>
+                            </div>
                         </div>
-
-                     
-                        <div class="col-md-4">
-                            <a href="https">
-                                <div class="mt-5 text-center">
-                                    <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2">
-                                        <img src="assets/image/interviews-circle.png" >
-                                    </div>
-                                    <p class="font-size-4 font-size-16 text-black-2 mb-2">interview Done                                    </p>
-                                    <h5
-                                        class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                        <span class="counter dashboard-count">41</span>
-                                    </h5>
-                                </div>
-                            </a>
+                        <div id="lastmonth" role="tabpanel" aria-labelledby="lastmonth-tab" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
+                                                                          <div class="mt-5 text-center">
+                                            <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="assets/image/position-circle.png"></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Positions
+                                            </p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter">2</span></h5>
+                                        </div>
+                                    </a></div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
+                                      >
+                                        <div class="mt-5 text-center">
+                                            <div class="text-orange bg-orange-opacity-1 circle-56 font-size-6 mb-2"><img
+                                                    src="assets/image/screenings-circle.png"></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Screening Done
+                                            </p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter">21</span></h5>
+                                        </div>
+                                    </a></div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
+                                      >
+                                        <div class="mt-5 text-center">
+                                            <div class="text-pink bg-pink-opacity-1 circle-56 font-size-6 mb-2">
+                                                <img src="assets/image/interviews-circle.png" ></div>
+                                            <p class="font-size-4 font-size-16 text-black-2 mb-2">Interviews
+                                                Done</p>
+                                            <h5
+                                                class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
+                                                <span class="counter">13</span></h5>
+                                        </div>
+                                    </a></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div>
+                    <div class="bg-white shadow-8 p-20 rounded dashboard-screen" style="">
+                        <h3 class="mb-4" style="">Upcoming Interviews</h3>
+                        <div class="Announcement-wrapper" style="border-bottom: 0px;">
+                            There is no upcoming interview
+                        </div>
+                    </div>
                 </div>
-
-
-            <!-- </div> -->
-        <!-- </div> -->
-
-        
-        <div class="shadow-4">
-        <div class="col-md-6">
-
-                <div class="bg-white shadow-8 p-20 rounded mb-4 dashboard-screen">
-                    <h3 class="mb-4 " style="margin-left: 30px; margin-top: 50px;">Concluded Screenings</h3>
+            </div>
+            <div class="col-md-6" style="">
+                <div class="bg-white shadow-8 p-20 rounded mb-4 dashboard-screen" style="">
+                    <h3 class="mb-4">Concluded Screenings</h3>
                     <div class="Announcement-wrapper" style="line-height: initial;">
                         <div class="download-screening"><a href="javascript:void(0)"
-                                data-link="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4"
+                                data-link="1.MP4"
                                 data-toggle="modal" data-target="#video_1" class="mr-2"><i class="fa fa-play"></i></a>
                             <div id="video_1" tabindex="-1" role="dialog" aria-labelledby="video_1Label"
                                 aria-hidden="true" class="modal fade">
                                 <div role="document" class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3><a href="https://hire.enablex.io/candidate-360/OTIyNTk=/profile">Sudhanshu
+                                            <h3><a>Sudhanshu
                                                 </a></h3> <button type="button" data-dismiss="modal" aria-label="Close"
                                                 class="close"><span aria-hidden="true">×</span></button>
                                         </div>
                                         <div class="modal-body"><video width="100%" height="100%" controls="controls">
                                                 <source
-                                                    src="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4"
+                                                    src=""
                                                     type="video/mp4">
                                             </video></div>
                                     </div>
                                 </div>
                             </div> <a
-                                href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4"
+                               
                                 title="Download this recording file" download="" class="inner-screen-download"><i
                                     class="fa fa-download"></i></a>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a href="https://hire.enablex.io/candidate-360/OTIyNTk=/profile"
+                            <p class="mb-1"><a 
                                     class="a_text">
                                     Sudhanshu
                                 </a> <span class="screen-date text-gray">Dec 07, 2022 6:08 PM</span></p>
-                            <h5 class="mb-1"><a href="https://hire.enablex.io/client/campaign/show/175" class="a_text">
+                            <h5 class="mb-1"><a  class="a_text"
+                                    style="">
                                     MEAN STACK Xeedance
                                 </a></h5>
                         </div>
                     </div>
                     <div class="Announcement-wrapper" style="line-height: initial;">
                         <div class="download-screening"><a href="javascript:void(0)"
-                                data-link="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63906616ab83ba3c85163006/603271002739/live_603271002739_1.MP4"
+                                data-link=""
                                 data-toggle="modal" data-target="#video_2" class="mr-2"><i class="fa fa-play"></i></a>
                             <div id="video_2" tabindex="-1" role="dialog" aria-labelledby="video_2Label"
                                 aria-hidden="true" class="modal fade">
                                 <div role="document" class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3><a href="https://hire.enablex.io/candidate-360/OTIyNTg=/profile">Ajharudin
+                                            <h3><a >Ajharudin
                                                 </a></h3> <button type="button" data-dismiss="modal" aria-label="Close"
                                                 class="close"><span aria-hidden="true">×</span></button>
                                         </div>
                                         <div class="modal-body"><video width="100%" height="100%" controls="controls">
                                                 <source
-                                                    src="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63906616ab83ba3c85163006/603271002739/live_603271002739_1.MP4"
-                                                    type="video/mp4">
+                                                   type="video/mp4">
                                             </video></div>
                                     </div>
                                 </div>
                             </div> <a
-                                href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63906616ab83ba3c85163006/603271002739/live_603271002739_1.MP4"
+                                
                                 title="Download this recording file" download="" class="inner-screen-download"><i
                                     class="fa fa-download"></i></a>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a href="https://hire.enablex.io/candidate-360/OTIyNTg=/profile"
+                            <p class="mb-1"><a
                                     class="a_text">
                                     Ajharudin
                                 </a> <span class="screen-date text-gray">Dec 07, 2022 3:38 PM</span></p>
-                            <h5 class="mb-1"><a href="https://hire.enablex.io/client/campaign/show/175" class="a_text">
+                            <h5 class="mb-1"><a class="a_text">
                                     MEAN STACK Xeedance
                                 </a></h5>
                         </div>
-                    </div> <a href="https://hire.enablex.io/client/calender/screenings" class="more-calender"><i
+                    </div> <a  class="more-calender"><i
                             class="fas fa-angle-right"></i> More...</a>
                 </div>
-
-            </div>
-        </div>
-    
-    </div>
-</div>
-
-
-<!-- row-2 -->
-    <div class="row">
-
-        <div class="shadow-4" >
-        <div class="col-md-6">
-                <h3 class="mb-4" >Upcoming Interviews</h3>
-                <p style="margin-left: 30px;">There is no upcoming interviews</p>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="shadow-4">
-
-                <div class="bg-white shadow-8 p-20 rounded dashboard-screen">
+                <div class="bg-white shadow-8 p-20 rounded dashboard-screen" style="">
                     <h3 class="mb-4">Concluded Interviews</h3>
                     <div class="Announcement-wrapper" style="line-height: initial;">
-                        <div class="download-screening"><a href="javascript:void(0)"
-                                data-link="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca482a91013e0e0a9876a/440290000452/live_440290000452_1.MP4"
+                        <div class="download-screening"><a 
+                                
                                 title="Video available to play." data-toggle="modal" data-target="#video_9999"
                                 class="mr-2"><i class="fa fa-play"></i></a></div>
                         <div id="video_9999" tabindex="-1" role="dialog" aria-labelledby="video_9999Label"
@@ -194,21 +241,19 @@
                                     <div class="modal-body multiple-video-playlist"><video id="videoplaylist_9999"
                                             preload="auto" tabindex="0" controls="controls" class="videoplaylist">
                                             <source
-                                                src="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca482a91013e0e0a9876a/440290000452/live_440290000452_1.MP4"
-                                                type="video/mp4">
+                                                src="" type="video/mp4">
                                         </video>
                                         <ul id="playlist_9999" class="playlist">
                                             <li class="active"><a
-                                                    href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca482a91013e0e0a9876a/440290000452/live_440290000452_1.MP4"
+                                                   
                                                     onclick="init(9999, 1, 0 ); return false;">
                                                     Session 1
                                                 </a></li>
-                                            <li><a href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca482a91013e0e0a9876a/949850000458/live_949850000458_1.MP4"
+                                            <li><a 
                                                     onclick="init(9999, 2, 1 ); return false;">
                                                     Session 2
                                                 </a></li>
-                                            <li><a href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca482a91013e0e0a9876a/907356000454/live_907356000454_1.MP4"
-                                                    onclick="init(9999, 3, 2 ); return false;">
+                                            <li><a                                               onclick="init(9999, 3, 2 ); return false;">
                                                     Session 3
                                                 </a></li>
                                         </ul>
@@ -217,22 +262,21 @@
                             </div>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a href="https://hire.enablex.io/candidate-360/OTIxNzk=/profile"
+                            <p class="mb-1"><a
                                     class="a_text">
                                     Sukhdev Sukhdev
                                 </a> <span class="screen-date text-gray">Nov 10, 2022 1:06 PM</span></p>
-                            <h5 class="mb-1"><a href="https://hire.enablex.io/client/campaign/show/154" class="a_text">
+                            <h5 class="mb-1"><a  class="a_text">
                                     Dot Net Full Stack New
                                 </a></h5>
                         </div>
                     </div>
                     <div class="Announcement-wrapper" style="line-height: initial;">
                         <div class="download-screening"><a href="javascript:void(0)"
-                                data-link="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca423a91013e0e0a98767/907356000463/live_907356000463_1.MP4"
+                                
                                 title="Video available to play." data-toggle="modal" data-target="#video_2_interview"
                                 class="mr-2"><i class="fa fa-play"></i></a> <a
-                                href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca423a91013e0e0a98767/907356000463/live_907356000463_1.MP4"
-                                title="Download this recording file" download="" class="inner-screen-download mr-2"><i
+                               title="Download this recording file" download="" class="inner-screen-download mr-2"><i
                                     class="fa fa-download"></i></a></div>
                         <div id="video_2_interview" tabindex="-1" role="dialog" aria-labelledby="video_2_interviewLabel"
                             aria-hidden="true" class="modal fade">
@@ -244,27 +288,27 @@
                                     </div>
                                     <div class="modal-body"><video width="100%" height="100%" controls="controls">
                                             <source
-                                                src="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/5eaed00e90ef8079c8042fc3/628016f9019f726d057fdd24/2022/11/636ca423a91013e0e0a98767/907356000463/live_907356000463_1.MP4"
                                                 type="video/mp4">
                                         </video></div>
                                 </div>
                             </div>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a href="https://hire.enablex.io/candidate-360/OTIxODU=/profile"
+                            <p class="mb-1"><a 
                                     class="a_text">
                                     GIRIJA PRASAD
                                 </a> <span class="screen-date text-gray">Nov 10, 2022 1:09 PM</span></p>
-                            <h5 class="mb-1"><a href="https://hire.enablex.io/client/campaign/show/154" class="a_text">
+                            <h5 class="mb-1"><a  class="a_text">
                                     Dot Net Full Stack New
                                 </a></h5>
                         </div>
-                    </div> <a href="https://hire.enablex.io/client/calender/interviews" class="more-calender"><i
+                    </div> <a  class="more-calender"><i
                             class="fas fa-angle-right"></i> More...</a>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

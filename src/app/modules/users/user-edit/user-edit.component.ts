@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { addUserModel } from 'src/app/models/AdminModel';
+import { ServicesService } from 'src/app/shared/services.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -18,7 +19,7 @@ export class UserEditComponent implements OnInit {
   location: any;
   activeRoute: any;
   
-  constructor() {this.addUserParams=new addUserModel }
+  constructor(private headerTitleService:ServicesService) {this.addUserParams=new addUserModel }
 
 
   keyPress(event: any) {
@@ -32,6 +33,7 @@ export class UserEditComponent implements OnInit {
   createUser(){}
   
   ngOnInit(): void {
+    this.headerTitleService.setTitle('Edit User')
   }
 
 }

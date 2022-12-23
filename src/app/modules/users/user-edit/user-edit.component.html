@@ -3,34 +3,45 @@
         <app-sidebar></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>
-<br>
-        
-        <div class="row " >
+        <app-header></app-header>
+
+        <!-- <div class="row ">
             <div class="title">
                 <h3>Add User</h3>
                 <h2>Welcome to Enablex Hire!</h2>
             </div>
+        </div> -->
+
+        <div class="row sub-title">
+            <!-- <div class="col-md-4 text">
+                <h5> This is a list of all Positions created in your Organisation.</h5>
+            </div> -->
 
 
+            <div class="col-md-11 mt-4 " style="margin-left: 19px;">
 
+                <a routerLink="/user" class="d-inline-flex align-items-center back text-gray font-weight-bold">
+                    <i class="fa fa-angle-left circle-40 bg-white mr-5 left-profile" style="margin-right: 10px;"></i>
+                  User List
+                </a>
 
-           
+            </div>
         </div>
-        <div class="col ">
-            <h2 routerLink="/user" style="margin-top:10px; margin-left: 970px; cursor: pointer"><i class="fa fa-backward"></i> Users</h2>
-        </div>
 
-        <div class="shadow-4">
+
+        <!-- <div class="col ">
+            <h2 routerLink="/user" style="margin-top:10px; margin-left: 970px; cursor: pointer">
+                <i class="fa fa-angle-left circle-40 bg-white mr-2 left-profile"></i> Users
+            </h2>
+        </div> -->
+
+        <div class="shadow-4 ml-2">
             <form #addCustomerForm="ngForm">
 
 
-                <div class="row">
+                <div class="row  mx-0">
 
-                    <div class="col-md-6">
-                        <!-- <input id="first_name" type="text" placeholder="First Name" name="first_name" value=""
-                        required="required" autocomplete="first_name" autofocus="autofocus" class="form-control"
-                        aria-required="true"> -->
-
+                    <div class="col-md-6 adduser">
                         <mat-form-field appearance="outline">
                             <mat-label> First Name</mat-label>
                             <input matInput id="firstName" name="firstName" class="form-control" #firstName='ngModel'
@@ -38,21 +49,17 @@
                         </mat-form-field>
                     </div>
 
-
-                    <div class="col-md-6">
+                    <div class="col-md-6 adduser">
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> Last Name</mat-label>
                             <input matInput id="lastName" class="form-control" #lastName='ngModel' name="lastName"
                                 [(ngModel)]="addUserParams.lastName" required>
                         </mat-form-field>
 
-                        <!-- <input id="first_name" type="text" placeholder="First Name" name="first_name" value=""
-                        required="required" autocomplete="first_name" autofocus="autofocus" class="form-control"
-                        aria-required="true"> -->
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row mx-0">
 
                     <div class="col-md-6">
                         <mat-form-field class="example-full-width" appearance="outline">
@@ -66,62 +73,40 @@
                         </mat-form-field>
                     </div>
 
-                    <div class="col-md-6">
-                        <mat-form-field appearance="outline" placeholder="Select User Type"
-                            style="margin-left: 15px; margin-top: 23px;">
-                            <mat-label> User Type</mat-label>
-                            <mat-select name="user" id="user" [(ngModel)]='addUserParams.typeId'>
-                                <mat-option [value]='1003'>Admin Executive</mat-option>
-                                <mat-option [value]='1007'>Associated Executive</mat-option>                             
-                            </mat-select>
 
+
+                    <div class="col-md-6 d-grid gap-3">
+                        <!-- <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Password </mat-label>
+                            <input matInput id="Password" name="password" class="form-control" required="true">
+                        </mat-form-field> -->
+
+                        <mat-form-field appearance="outline" >
+                            <mat-label> User Type</mat-label>
+                            <mat-select name="user" id="user">
+                                <mat-option [value]='1003'>Admin Executive</mat-option>
+                                <mat-option [value]='1007'>Associated Executive</mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </div>
 
-                    <!-- <div class="col-md-3">
-                    <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label>Phone</mat-label>
-                        <input matInput id="mobile" type="text" class="form-control" required #mobile='ngModel'
-                            name="mobile" [(ngModel)]="addUserParams.mobile" minlength="10" maxlength="10"
-                            (keypress)="keyPress($event)">
-                            <mat-error *ngIf="email.errors?.['required']">Please enter a valid Mobile number
-                            </mat-error>
-                    </mat-form-field>
-                </div> -->
-
-                    <!-- <div class="col-md-3">
-                    <mat-form-field appearance="outline">
-                        <mat-label> Units</mat-label>
-                        <mat-select name="locationName" id="locationName" [(value)]="addUserParams.locationName"
-                            [(ngModel)]="addUserParams.locationId">
-                            <mat-option value="{{addUserParams.locationName}}">
-                                {{addUserParams.locationName}}</mat-option>
-                            <mat-option *ngFor="let l of locationList " [value]="l.locationId">
-                                {{l.locationName}} </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div> -->
-
-                    
                 </div>
 
-                <div class="row" style="width: 110%;">
-                    <!-- <div class="col">
-                        <mat-form-field appearance="outline" placeholder="Select User Type"
-                            style="margin-left: 15px; margin-top: 23px;">
+                <!-- <div class="row mx-0 d-grid gap-3">
+                    <div class="col-md-12 mt-0 pt-0">
+                        <mat-form-field appearance="outline" >
                             <mat-label> User Type</mat-label>
-                            <mat-select name="user" id="user" [(ngModel)]='addUserParams.typeId'>
+                            <mat-select name="user" id="user">
                                 <mat-option [value]='1003'>Admin Executive</mat-option>
-                                <mat-option [value]='1007'>Associated Executive</mat-option>                             
+                                <mat-option [value]='1007'>Associated Executive</mat-option>
                             </mat-select>
-
                         </mat-form-field>
-                    </div> -->
-                </div>
+                    </div>
+                </div> -->
 
             </form>
-            <div class="row">
-                <div class="col-md-3" style="margin-top: 23px;">
+            <div class="row mx-0">
+                <div class="col-md-3"   >
                     <button mat-raised-button color="primary" (click)="createUser()"
                         [disabled]="addCustomerForm.invalid">
                         <span *ngIf="!addUserParams.userDetailsId">Submit </span>
@@ -133,3 +118,5 @@
         <!-- <span *ngIf="addUserParams.businessId">Update</span></button> -->
     </mat-drawer-content>
 </mat-drawer-container>
+
+<app-footer></app-footer>

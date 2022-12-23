@@ -1,5 +1,5 @@
 .mat-form-field {
-    width: 90%;
+    width: 50%;
     /* margin: 10px; */
     display: block;
     margin-left: 5%;
@@ -49,7 +49,7 @@
   
   mat-drawer-container {
     height: 100%;
-    background-color: white;
+    background-color: #F6F9FA;
   
   }
   
@@ -140,26 +140,18 @@
   }
   
   
-  .shadow-4 {
-  
-  
-    margin-left: 50px;
+  .shadow-4 {  
+    margin-left: 10px;
     height: 100px;
-    width: 1000px;
+    width: 99%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* text-align: center; */
     border-radius: 10px;
     /* align-items: center; */
-    /* margin-top: 70px; */
+    margin-top: 15px;
   
   }
   
-  /* .innerHeader {
-    background-color: #273185;
-    height: 70px;
-    width: 100%;
-    color: white;
-  } */
   
   .title {
     margin-top: 1px;
@@ -175,19 +167,38 @@
   
   }
 
-  .title2 {
-    margin-top: 1px;
-   
-    height: 50px;
-    text-align: left;
+ 
+
+  .text {
+    font-size: 50px;
+    font-family: sans-serif;
     font-weight: bold;
-    margin-top: 10px;
-    position: relative;
+  }
+  
+  .text h5 {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .sub-title {
+    margin-top: 1px;
+    /* font-weight: bold; */
+    /* position: relative; */
     justify-content: space-between;
     display: flex;
-    cursor: pointer;
-  
+    margin-left: 4px;
+    font-weight: bold;
   }
+  .sub-title button {
+    /* width: 30%; */
+    text-justify: auto;
+    /* display: flex; */
+    float: right
+  }
+
+
   .form1 .mat-form-field{
     margin: 1px;
     border: 0px;

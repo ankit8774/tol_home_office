@@ -1,26 +1,3 @@
-/* 
-
-.demo-table {
-    width: 100%;
-  }
-  
-  .demo-button-container {
-    padding-bottom: 16px;
-  }
-  
-  .demo-button + .demo-button {
-    margin-left: 8px;
-  }
-
-  .table{
-    --bs-table-striped-bg: rgba(221, 221, 10, 0.24);
-  }
-
- 
-.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
-    color: rgba(0,0,0,.87);
-    background-color: #c9b605;
-} */
 
 .main-content {
     padding: 0px 20px;
@@ -30,10 +7,19 @@
     /* background-color: #F6F9FA; */
   }
   
-  .mat-drawer-container {
+  mat-drawer-container {
     background-color: #F6F9FA;
     color: rgba(0, 0, 0, .87);
-    height: 100%;
+    height: 91%;
+  }
+  mat-drawer {
+    width: 255px;   
+    margin-top: 0px;
+    /* overflow-x: hidden; */
+  }
+  mat-drawer-content {
+    /* overflow-x: hidden; */
+    overflow-y: hidden;
   }
   
   table {
@@ -58,29 +44,9 @@
     font-family: Lato-Black;
   }
   
-  *,
-  ::after,
-  ::before {
-    /* box-sizing:content-box; */
-    font-family: 'Lato';
-  }
   
   
-  /* .main-content[_ngcontent-phb-c164] {
-  padding: 66px 27px 106px 0px;
-  } */
   
-  
-  /* .main-nav {
-  display:flex;
-  justify-content: space-between;
-  } */
-  
-  
-  /* .main-nav li :nth-child() {
-  margin-right: auto;
-  z-index: 3;
-  } */
   
   .custom-pagination ::ng-deep .ngx-pagination .current {
     background: #409da9;
@@ -181,6 +147,50 @@
   justify-content: space-between;
     display: flex;
   }
+  .sub-title {
+    margin-top: 25px;
+    /* font-weight: bold; */
+    /* position: relative; */
+    justify-content: space-between;
+    display: flex;
+    margin-left: 4px;
+    font-weight: bold;
+  }
+  
+  .sub-title button {
+    /* width: 30%; */
+    text-justify: auto;
+    /* display: flex; */
+    float: right
+  }
+  
+  .text {
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  
+  .text h5 {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .total {
+    margin-top: -20px;
+    margin-left: 17px;
+    font-weight: bold;
+  }
+  .go {
+  height: 49px;
+  /* padding: 7px 14px 0 14px; */
+}
+.mx-0 {
+  margin-right: 210px !important;
+  margin-left: 0 !important;
+  margin-top: 25px;
+}
+
   
   .myInput{    
     box-sizing: border-box;
@@ -197,6 +207,15 @@
   .modal-body textarea{
 border: 0px;
 /* width: 150%; */
+  }
+
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+  }
+  
+  .padd_colx5 {
+    padding: 0px 33px;
   }
 
   

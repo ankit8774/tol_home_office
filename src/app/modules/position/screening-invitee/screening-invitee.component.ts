@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } fro
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { ServicesService } from 'src/app/shared/services.service';
 
 // import { MatSnackBar } from '@angular/material';
 
@@ -35,7 +36,7 @@ export class ScreeningInviteeComponent implements OnInit {
   searchText:any
   loading:any
   
-  constructor(private modalService: NgbModal , private snackBar:MatSnackBar) { }
+  constructor(private modalService: NgbModal,private headerTitleService:ServicesService , private snackBar:MatSnackBar) { }
 
 
   openBackDropCustomClass(content: any) {
@@ -44,27 +45,9 @@ export class ScreeningInviteeComponent implements OnInit {
 
   
   ngOnInit(): void {
+    this.headerTitleService.setTitle('Full Stack Developer')
 
-  //   console.log("a "+this.starCount)
-  //   for (let index = 0; index < this.starCount; index++) {
-  //     this.ratingArr.push(index as never);
-  //   }
-  // }
-  // onClick(rating:number) {
-  //   console.log(rating)
-  //   this.snackBar.open('You rated ' + rating + ' / ' + this.starCount, '', {
-  //     duration: this.snackBarDuration
-  //   });
-  //   this.ratingUpdated.emit(rating);
-  //   return false;
-  // }
-
-  // showIcon(index:number) {
-  //   if (this.rating >= index + 1) {
-  //     return 'star';
-  //   } else {
-  //     return 'star_border';
-  //   }
+  
   }
 
 }

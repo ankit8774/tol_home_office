@@ -3,6 +3,8 @@
     <mat-drawer mode="side" opened="true">
         <app-sidebar></app-sidebar>
     </mat-drawer>
+    
+    <mat-drawer-content>
 
     <app-header></app-header>
 
@@ -92,90 +94,33 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th> Name</th>
-                        <!-- <th>Last Name</th> -->
+                        <th> Name</th>                      
                         <th>Contact Person Name</th>
-                        <th>Contanct Person Email</th>
-                        <!-- <th>Role</th> -->
-                        <th>Added </th>
-                        <!-- <th>Type</th> -->
-                        <!-- <th> More</th> -->
+                        <th>Contanct Person Email</th>                 
+                        <th>Added </th>                    
 
                     </tr>
                 </thead>
 
-                <tbody #empty>
-                    <!-- <ng-container *ngIf="( userList |  filter:searchText) as result"> -->
-
-                    <!-- <div *ngFor="let u of userList; let i = index"> </div> -->
-
-                    <!-- <p *ngIf="userList.length === 0">No Result</p>   -->
-
-                    <!-- <p *ngIf="result.length === 0" style="text-align: center;">No User Found</p> -->
-
-
-
-                    <tr>
-                        <!-- <tr> -->
-                        <!-- <td>          
-                 NO DATA FOUND
-            </td> -->
-                        <!-- <td>Ankit</td> -->
-
+                <tbody #empty>                    
+                    <tr>                     
                         <td colspan="7" style="text-align: center;">No Record Found</td>
-                        <!-- <td>ankit@gmail.com</td>
-                            <td>Front-End Developer</td>
-                            <td>05-Dec-2022</td> -->
-                        <!-- <td>{{| titlecase}}</td> -->
-                        <!-- <td style="text-transform: uppercase;">{{c.middleName | titlecase}}</td> -->
-                        <!-- <td>{{u.lastName | titlecase}}</td> -->
-                        <!-- <td>{{u.mobile }}</td> -->
-                        <!-- <td>{{u.email }}</td> -->
-                        <!-- <td>{{u.businessName |uppercase }}</td> -->
-                        <!-- <td>{{u.locationName |uppercase }}</td> -->
-                        <!-- <td>
-                                <span style="font-family: lato-black;" *ngIf="u.typeId==1001">Super Admin</span>
-                                <span style="font-family: lato-black;" *ngIf="u.typeId==1002">Customer</span>
-                                <span style="font-family: lato-black;" *ngIf="u.typeId==1003">Branch Manager</span>
-                                <span *ngIf="u.typeId==1004">Company Admin</span>
-                                <span *ngIf="u.typeId==1005">Operation Manager</span>
-                                <span style="font-family: lato-black;" *ngIf="u.typeId==1006">Regional Head</span>
-                                <span style="font-family: lato-black;" *ngIf="u.typeId==1007">Auditor</span>
-                                <span *ngIf="u.typeId==1008"></span>
-                            </td> -->
-                        <!-- <button mat-raised-button routerLink="/addUser/{{u.userDetailsId}}">Edit</button> &nbsp; -->
-
-                        <!-- <button mat-raised-button routerLink="/addUser/{{u.userDetailsId}}">Suspend</button> &nbsp; -->
-
-                        <td>
+                                                <td>
 
                             <ul class="list-inline">
                                 <li>
-                                    <!-- <button mat-raised-button  (click)="customerDetails(c)">Edit</button> &nbsp; -->
-                                    <!-- <button mat-raised-button routerLink="/addUser">Edit</button> &nbsp;  -->
-
-                                    <!-- <button mat-raised-button routerLink="">Suspend</button> &nbsp;  -->
-
-                                    <!-- <button mat-raised-button    >Details</button> -->
-                                    <!-- <button mat-raised-button  routerLink="/businessDetails/edit/{{b.businessId}}" >Details</button> -->
-                                </li>
+                                   </li>
                             </ul>
                         </td>
                     </tr>
-                    <!-- </tr> -->
-
-                    <!-- </ng-container> -->
-
+                  
                 </tbody>
 
             </table>
             <ng-template #no_data_templ> NO DATA FOUND</ng-template>
-            <!-- </div> -->
+       
 
 
-            <!-- <ng-container *ngIf="dataSource.data.length > 0">
-                <p>There is no data for this filter</p>
-            </ng-container> -->
 
             <pagination-controls class="custom-pagination" (pageChange)="pageChangeEvent($event)">
             </pagination-controls>
@@ -184,8 +129,8 @@
     </div>
 
 
-    <!-- <ng-container *ngIf="(  |  filter:searchText) as result"> -->
-    <!-- <p *ngIf="result.length === 0" style="text-align: center;">No User Found</p> -->
-    <!-- </ng-container> -->
 
-    <!-- </div> -->
+    </div>
+    </mat-drawer-content>
+    </mat-drawer-container>
+    <app-footer></app-footer>

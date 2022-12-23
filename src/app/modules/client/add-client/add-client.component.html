@@ -3,35 +3,47 @@
         <app-sidebar></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>
+        <app-header></app-header>
 
-<br>
-        <div class="row">
+
+        <!-- <div class="row">
             <div class="title">
                 <h3> Add Client</h3>
                 <h2>Welcome to Enablex Hire!</h2>
             </div>
+        </div> -->
 
+        <div class="row sub-title">
 
+            <div class="col-md-11 mt-4 " style="margin-left: 19px;">
+
+                <a routerLink="/client" class="d-inline-flex align-items-center back text-gray font-weight-bold">
+                    <i class="fa fa-angle-left circle-40 bg-white mr-5 left-profile" style="margin-right: 10px;"></i>
+                    Client List
+                </a>
+
+                <!-- <h2 routerLink="/business" style="margin-top:10px; margin-left: 930px; cursor: pointer"><i
+                        class="fa fa-backward"></i> Client List</h2> -->
+            </div>
         </div>
-        <div class="col ">
-            <h2 routerLink="/business" style="margin-top:10px; margin-left: 930px; cursor: pointer"><i
-                    class="fa fa-backward"></i> Client List</h2>
-        </div>
 
-        <div class="shadow-4">
+      
+        <div class="shadow-4 ml-2">
             <form #addCustomerForm="ngForm">
 
-
-                <div class="row" >
-                    <div class="col-md-12" >
-                        <mat-form-field appearance="outline" >
+                <div class="row mx-0">
+                    <div class="col-md-12">
+                        <mat-form-field appearance="outline">
                             <mat-label> Company Name</mat-label>
-                            <input matInput id="firstName" name="firstName" class="form-control" required >
+                            <input matInput id="firstName" name="firstName" class="form-control" required>
                         </mat-form-field>
                     </div>
+                </div>    
 
-                    <div class="col-md-4">
-                        <mat-form-field appearance="outline" style="margin-left: 50px;">
+                <div class="row mx-0 ">
+
+                    <div class="col-md-4 d-grid gap-3">
+                        <mat-form-field appearance="outline">
                             <mat-label> Contact Person Name</mat-label>
                             <input matInput id="firstName" name="firstName" class="form-control" required>
                         </mat-form-field>
@@ -41,7 +53,7 @@
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Contact Person Email</mat-label>
                             <input matInput id="email" class="form-control" #email='ngModel' required name="email"
-                                type="email"  ngModel email="true"
+                                type="email" ngModel email="true"
                                 pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
                             <mat-error *ngIf="email.errors &&(email.touched || email.dirty)">
                                 Please Enter Valid Email
@@ -50,7 +62,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <mat-form-field class="example-full-width" appearance="outline" style="margin-left:-19px;">
+                        <mat-form-field class="example-full-width" appearance="outline" >
                             <mat-label> Contact Person Phone</mat-label>
                             <input matInput id="lastName" class="form-control" name="lastName" required>
                         </mat-form-field>
@@ -58,9 +70,9 @@
                 </div>
 
 
-                <div class="row">
+                <div class="row mx-0 ">
                     <div class="col-md-12">
-                        <mat-form-field class="example-full-width" appearance="outline" style="margin-top:15px;">
+                        <mat-form-field class="example-full-width" appearance="outline" >
                             <mat-label> Address</mat-label>
                             <input matInput id="lastName" class="form-control" name="lastName" required>
                         </mat-form-field>
@@ -68,38 +80,36 @@
                 </div>
 
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <mat-form-field class="example-full-width" appearance="outline" style="margin-left: 50px;">
+                <div class="row mx-0 ">
+                    <div class="col-md-4 d-grid gap-3">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> City </mat-label>
-                            <input matInput id="Password" class="form-control"  name="Password"
-                                 required>
+                            <input matInput id="Password" class="form-control" name="Password" required>
                         </mat-form-field>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-grid gap-3">
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> State </mat-label>
-                            <input matInput id="Password" class="form-control"  name="Password"
-                                 required>
+                            <input matInput id="Password" class="form-control" name="Password" required>
                         </mat-form-field>
                     </div>
 
-                    <div class="col-md-4">
-                        <mat-form-field appearance="outline" placeholder="Select User Type"
-                            style="margin-left: -19px;">
+                    <div class="col-md-4 d-grid gap-3">
+                        <mat-form-field appearance="outline" placeholder="Select User Type" >
                             <mat-label> Country</mat-label>
                             <mat-select name="user" id="user">
-                                <mat-option [value]='1003'>Admin Executive</mat-option>
-                                <mat-option [value]='1007'>Associated Executive</mat-option>                               
+                                
+                                <mat-option [value]='1003'>India</mat-option>
+                                <mat-option [value]='1007'>Russia</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>
                 </div>
             </form>
 
-            <div class="row">
-                <div class="col-md-12" style="margin-top: 23px;">
+            <div class="row mx-0 ">
+                <div class="col-md-12" >
                     <button mat-raised-button color="primary" [disabled]="addCustomerForm.invalid">Submit
                         <!-- <span *ngIf="!addBusinessParams">Submit </span> -->
                         <!-- <span *ngIf="addBusinessParams">Update </span> -->
@@ -110,3 +120,5 @@
         <!-- <span *ngIf="addUserParams.businessId">Update</span></button> -->
     </mat-drawer-content>
 </mat-drawer-container>
+
+<app-footer></app-footer>

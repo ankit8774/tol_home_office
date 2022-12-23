@@ -1,26 +1,4 @@
-/* 
 
-.demo-table {
-    width: 100%;
-  }
-  
-  .demo-button-container {
-    padding-bottom: 16px;
-  }
-  
-  .demo-button + .demo-button {
-    margin-left: 8px;
-  }
-
-  .table{
-    --bs-table-striped-bg: rgba(221, 221, 10, 0.24);
-  }
-
- 
-.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
-    color: rgba(0,0,0,.87);
-    background-color: #c9b605;
-} */
 
 .main-content {
   padding: 0px 20px;
@@ -30,10 +8,19 @@
   /* background-color: #F6F9FA; */
 }
 
-.mat-drawer-container {
+mat-drawer-container {
   background-color: #F6F9FA;
   color: rgba(0, 0, 0, .87);
-  height: 100%;
+  height: 91%;
+}
+
+mat-drawer {
+  width: 255px;   
+  margin-top: 0px;
+}
+mat-drawer-content {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 table {
@@ -58,29 +45,9 @@ table {
   font-family: Lato-Black;
 }
 
-*,
-::after,
-::before {
-  /* box-sizing:content-box; */
-  font-family: 'Lato';
-}
 
 
-/* .main-content[_ngcontent-phb-c164] {
-  padding: 66px 27px 106px 0px;
-  } */
 
-
-/* .main-nav {
-  display:flex;
-  justify-content: space-between;
-  } */
-
-
-/* .main-nav li :nth-child() {
-  margin-right: auto;
-  z-index: 3;
-  } */
 
 .custom-pagination ::ng-deep .ngx-pagination .current {
   background: #409da9;
@@ -148,22 +115,22 @@ table {
 }
 
 table tr td {
-  border: unset;
+  border: 1px;
   vertical-align: middle;
   font-size: 13px !important;
   padding: 10px 20px !important;
   vertical-align: middle;
-  font-family: Lato-Black;
+  /* font-family: Lato-Black; */
 }
 
 table tr th {
-  border: unset;
+  border: 1px ;
   font-size: 13px;
   color: #212529;
   padding: 15px 20px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-family: Lato-Black;
+  /* font-family: Lato-Black; */
 }
 
 .pad_20 {

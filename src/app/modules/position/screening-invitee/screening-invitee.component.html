@@ -5,172 +5,181 @@
     <app-header></app-header>
 
     <div class="main-content">
-        <div class="row">
 
-            <div class="title">
+
+        <!-- <div class="title">
                 <h3>Front End Developer</h3>
                 <h2>Welcome to Enablex Hire!</h2>
-            </div>
+            </div> -->
 
-            <button mat-raised-button routerLink="/profileInvite"
+        <!-- <button mat-raised-button routerLink="/profileInvite"
                 style="margin-left:900px; margin-top: 20px; width: 160px;">
                 + Invite Candidate
-            </button>
-        </div>
+            </button> -->
+        <!-- </div> -->
 
-        <h3>Candidates for Screening Test (2)</h3>
+        <div class="row sub-title">
+            <div class="col-md-8 text">
 
-        <!-- <div *ngIf="loading" class="d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+                <h5>Candidates for Screening Test (2)</h5>
             </div>
-        </div> -->
-        <div class="row">
-            <div class="col">
-
-                <td>
-
-                    <mat-form-field appearance="outline">
-                        <mat-label> Filter By Status </mat-label>
-                        <mat-select name="businessId" id="businessId">
-                            <mat-option value="">-- All --</mat-option>
-                            <mat-option value="SI">Screening Invited</mat-option>
-                            <mat-option value="SC">Screening Cancelled</mat-option>
-                            <mat-option value="SFP">Screening Feedback Pending</mat-option>
-                            <mat-option value="SH">Screening Hold</mat-option>
-                            <mat-option value="SR">Screening Rejected</mat-option>
-                            <mat-option value="SS">Screening Shortlisted</mat-option>
-                            <mat-option value="CH">Closed Hold</mat-option>
-                            <mat-option value="CR">Closed Rejected</mat-option>
-                            <mat-option value="CS">Closed Shortlisted</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-
-
-                    &nbsp;<button mat-raised-button
-                        style="height: 52px; margin-top:45px; padding: 0 14px 0 14px;">Go</button>
+            <div class="col-md-4">
+                <button class="float-right" mat-raised-button routerLink="/profileInvite">
+                   + Invite Candidate
+                </button>
             </div>
         </div>
-        <p><b>Total : 2</b></p>
-        <div class="col-12 padd_colx5 pad_20">
-            <div class="table-responsive">
 
-                <table class="table table-striped">
-                    <!-- <colgroup>
+     
+        <div class="row mx-0">
+            <div class="col-md-3">
+
+                <mat-form-field appearance="outline">
+                    <mat-label> Filter By Status </mat-label>
+                    <mat-select name="businessId" id="businessId">
+                        <mat-option value="">-- All --</mat-option>
+                        <mat-option value="SI">Screening Invited</mat-option>
+                        <mat-option value="SC">Screening Cancelled</mat-option>
+                        <mat-option value="SFP">Screening Feedback Pending</mat-option>
+                        <mat-option value="SH">Screening Hold</mat-option>
+                        <mat-option value="SR">Screening Rejected</mat-option>
+                        <mat-option value="SS">Screening Shortlisted</mat-option>
+                        <mat-option value="CH">Closed Hold</mat-option>
+                        <mat-option value="CR">Closed Rejected</mat-option>
+                        <mat-option value="CS">Closed Shortlisted</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="col-md-3 my-1  ">
+                <button class="go" mat-raised-button>Go</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row sub-title">
+        <div class="col-md-6 text total">
+            <h5>Total: 2</h5>
+        </div>
+    </div>
+
+    <div class="col-12 padd_colx5 pad_20">
+        <div class="table-responsive">
+
+            <table class="table table-striped">
+                <!-- <colgroup>
                         <col style="width: 20%;">
               <col style="width: 20%;">
               <col style="width: 20%;">
               <col style="width: 20%;">
               <col style="width: 20%;">
                     </colgroup> -->
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                            <th>Recording Date</th>
-                            <th>Rec.</th>
-                            <th>Action</th>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Recording Date</th>
+                        <th>Rec.</th>
+                        <th>Action</th>
 
-                        </tr>
-                    </thead>
+                    </tr>
+                </thead>
 
-                    <tbody #empty>
-                        <ng-container *ngIf="( locationList ) as result">
+                <tbody #empty>
+                    <ng-container *ngIf="( locationList ) as result">
 
-                            <tr *ngFor="let u of locationList   let i = index ">
-                                <td>{{i+1}}</td>
-                                <td>
-                                    <a routerLink="/candidateProfile" title="Position Profile" style="color: #3490dc;
+                        <tr *ngFor="let u of locationList   let i = index ">
+                            <td>{{i+1}}</td>
+                            <td>
+                                <a routerLink="/candidate" title="Position Profile" style="color: #3490dc;
                                     text-decoration: none;
                                     background-color: transparent"> AnkitSrivastava </a>
-                                </td>
-                                <td>ankit@gmail.com </td>
+                            </td>
+                            <td>ankit@gmail.com </td>
 
-                                <td>
-                                    <ng-template #content let-modal>
-                                        <div class="modal-header">
-                                            <h4 class="title1">Screening Feedback (0)</h4>
-                                            <!-- <a href="">
+                            <td>
+                                <ng-template #content let-modal>
+                                    <div class="modal-header">
+                                        <h4 class="title1">Screening Feedback (0)</h4>
+                                        <!-- <a href="">
                                                 <h4 class="title1">Post FeedBack ?</h4>
                                             </a> -->
 
-                                            <button type="button" class="btn-close" aria-label="Close"
-                                                (click)="modal.dismiss('Cross click')"></button>
-                                        </div>
+                                        <button type="button" class="btn-close" aria-label="Close"
+                                            (click)="modal.dismiss('Cross click')"></button>
+                                    </div>
 
-                                        <div class="modal-body ">
-                                            <p>FeedBack Date : Dec 16,2022</p>
+                                    <div class="modal-body ">
+                                        <p>FeedBack Date : Dec 16,2022</p>
 
-                                            <ngb-rating [(rate)]="currentRate"></ngb-rating>
-                                            <br> <br>
+                                        <ngb-rating [(rate)]="currentRate"></ngb-rating>
+                                        <br> <br>
 
-                                            <p>Recommend:</p>
+                                        <p>Recommend:</p>
 
-                                            <mat-form-field appearance="outline" class="col-md-12">
-                                                <!-- <mat-label>Select</mat-label> -->
-                                                <mat-select placeholder="Select">
-                                                    <!-- <mat-option value="Sl"></mat-option> -->
-                                                    <mat-option value="Sl">Shortlist</mat-option>
-                                                    <mat-option value="Hold">Hold</mat-option>
-                                                    <mat-option value="reject">Reject</mat-option>
-                        
-                                                </mat-select>
-                                            </mat-form-field>
+                                        <mat-form-field appearance="outline" class="col-md-12">
+                                            <!-- <mat-label>Select</mat-label> -->
+                                            <mat-select placeholder="Select">
+                                                <!-- <mat-option value="Sl"></mat-option> -->
+                                                <mat-option value="Sl">Shortlist</mat-option>
+                                                <mat-option value="Hold">Hold</mat-option>
+                                                <mat-option value="reject">Reject</mat-option>
+
+                                            </mat-select>
+                                        </mat-form-field>
 
 
-                                            <p>Comment :</p>
-                                            <mat-form-field appearance="outline" class="col-md-12">
+                                        <p>Comment :</p>
+                                        <mat-form-field appearance="outline" class="col-md-12">
 
-                                                <textarea matInput type="text" placeholder="Your Feedback Here"></textarea>
-                                            </mat-form-field>
-                                        </div>
+                                            <textarea matInput type="text" placeholder="Your Feedback Here"></textarea>
+                                        </mat-form-field>
+                                    </div>
 
-                                        <div class="modal-footer">
-                                            <button mat-raised-button type="button"
-                                                (click)="modal.close('Close click')">Submit Feedback</button> &nbsp;
-                                                <button mat-raised-button type="button"
-                                                (click)="modal.close('Close click')">Submit & Close</button>
-                                        
-                                        </div>
-                                    </ng-template>
+                                    <div class="modal-footer">
+                                        <button mat-raised-button type="button"
+                                            (click)="modal.close('Close click')">Submit Feedback</button> &nbsp;
+                                        <button mat-raised-button type="button"
+                                            (click)="modal.close('Close click')">Submit & Close</button>
 
-                                    <a title="Position Profile" style="color: #3490dc; text-decoration: none; 
+                                    </div>
+                                </ng-template>
+
+                                <a title="Position Profile" style="color: #3490dc; text-decoration: none; 
                                     background-color: transparent; cursor:pointer"
-                                        (click)="openBackDropCustomClass(content)">Feedback Pending</a>
-                                </td>
-                                <td>07-Dec-2022</td>
-                                <td>
-                                    <button mat-raised-button>v</button> &nbsp;
-                                    <button mat-raised-button>r</button>
-                                </td>
+                                    (click)="openBackDropCustomClass(content)">Feedback Pending</a>
+                            </td>
+                            <td>07-Dec-2022</td>
+                            <td>
+                                N/A
+                            </td>
 
-                                <td>
-                                    <button mat-raised-button [matMenuTriggerFor]="menu">Action</button>
-                                    <mat-menu #menu="matMenu">
-                                        <button mat-menu-item> <i class="fa fa-trash">del</i> Delete
-                                            Invite</button>
-                                        <button mat-menu-item><i class="fa fa-paper-plane"></i> Re-Invite</button>
-                                        <button mat-menu-item> <i class="fa fa-users"></i>
-                                            Interview-Invite</button>
+                            <td>
+                                <button mat-raised-button [matMenuTriggerFor]="menu">Action</button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Delete Invite</button>
+                                    <button mat-menu-item> Re-Invite</button>
+                                    <button mat-menu-item> Interview-Invite</button>
+                                </mat-menu>
+                            </td>
 
-                                    </mat-menu>
-                                </td>
+                    </ng-container>
 
-                        </ng-container>
+                </tbody>
 
-                    </tbody>
+            </table>
 
-                </table>
+            <pagination-controls class="custom-pagination">
+            </pagination-controls>
 
-                <pagination-controls class="custom-pagination">
-                </pagination-controls>
-
-            </div>
         </div>
-
-
     </div>
+
+
+    <!-- </div> -->
+
 </mat-drawer-container>
 <app-footer></app-footer>

@@ -5,42 +5,24 @@
     <mat-drawer-content>
         <app-header></app-header>
 
-        <!-- <div class="row">
 
-
-            <div class="title">
-                <h3>Post A New Position</h3>
-                <h2>Welcome to Enablex Hire!</h2>
-            </div>
-
-        </div> -->
-        <!--         
-        <div class="col ">
-            <h2 routerLink="/user" style="margin-top:10px; margin-left: 970px; cursor: pointer"><i class="fa fa-backward"></i> Users</h2>
-        </div> -->
-
-        <div class="shadow-4">
+        <div class="shadow-4 ml-2">
             <form #addCustomerForm="ngForm">
 
-
-                <div class="row">
-
+                <div class="row mx-0">
                     <div class="col-md-6">
-                        <!-- <input id="first_name" type="text" placeholder="First Name" name="first_name" value=""
-                        required="required" autocomplete="first_name" autofocus="autofocus" class="form-control"
-                        aria-required="true"> -->
-
-                        <mat-form-field appearance="outline" style="margin-left: 40px;">
+                       
+                        <mat-form-field appearance="outline" >
                             <mat-label> Position Name</mat-label>
                             <input matInput id="firstName" name="firstName" class="form-control" required>
                         </mat-form-field>
                     </div>
 
-
                     <div class="col-md-6">
-                        <mat-form-field class="example-full-width" appearance="outline" style="margin-left: -2px; ;">
+                        <mat-form-field appearance="outline">
                             <mat-label> Assign To</mat-label>
-                            <mat-select  id="lastName" class="form-control" name="lastName" placeholder="Select Executive" required style="height: 6px; border:none">
+                            <mat-select id="lastName"  name="lastName"
+                                placeholder="Select Executive" required >
                                 <mat-option value="1">Exe-1</mat-option>
                                 <mat-option value="2">Exe-2</mat-option>
                                 <mat-option value="3">Exe-3</mat-option>
@@ -54,59 +36,20 @@
                     </div>
                 </div>
 
-                <div class="row" style="margin-top: 2px;">
-
-                    <!-- <div class="col-md-6">
-                        <mat-form-field class="example-full-width" appearance="outline">
-                            <mat-label>Email</mat-label>
-                            <input matInput id="email" class="form-control" #email='ngModel' required name="email"
-                                type="email"  ngModel email="true"
-                                pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
-                            <mat-error *ngIf="email.errors &&(email.touched || email.dirty)">
-                                Please Enter Valid Email
-                            </mat-error>
-                        </mat-form-field>
-                    </div> -->
-
-                    <!-- <div class="col-md-3">
-                    <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label>Phone</mat-label>
-                        <input matInput id="mobile" type="text" class="form-control" required #mobile='ngModel'
-                            name="mobile" [(ngModel)]="addUserParams.mobile" minlength="10" maxlength="10"
-                            (keypress)="keyPress($event)">
-                            <mat-error *ngIf="email.errors?.['required']">Please enter a valid Mobile number
-                            </mat-error>
-                    </mat-form-field>
-                </div> -->
-
-                    <!-- <div class="col-md-3">
-                    <mat-form-field appearance="outline">
-                        <mat-label> Units</mat-label>
-                        <mat-select name="locationName" id="locationName" [(value)]="addUserParams.locationName"
-                            [(ngModel)]="addUserParams.locationId">
-                            <mat-option value="{{addUserParams.locationName}}">
-                                {{addUserParams.locationName}}</mat-option>
-                            <mat-option *ngFor="let l of locationList " [value]="l.locationId">
-                                {{l.locationName}} </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div> -->
+                <div class="row mx-0">
 
                     <div class="col-md-6">
-                        <mat-form-field class="example-full-width" appearance="outline"
-                            style="margin-left: 40px; margin-top:15px;">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> Group </mat-label>
                             <input matInput id="Password" class="form-control" name="Password" required>
                         </mat-form-field>
                     </div>
 
                     <div class="col-md-6">
-                        <mat-form-field class="example-full-width" appearance="outline"
-                            style="margin-left: -2px; margin-top:15px;">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> Hiring For Client </mat-label>
-                            <!-- <input matInput id="Password" class="form-control" name="Password" required> -->
-                            <mat-select  id="lastName" class="form-control" name="lastName" placeholder="Select Client" required style="height: 6px; border:none">
-                                <!-- <mat-option value="1">Select Client</mat-option> -->
+                            <mat-select id="lastName" name="lastName" placeholder="Select Client"
+                                required>
                                 <mat-option value="1">client-1</mat-option>
                                 <mat-option value="2">client-2</mat-option>
                                 <mat-option value="3">client-3</mat-option>
@@ -118,24 +61,20 @@
 
                 </div>
 
-                <div class="row">
-                    <mat-form-field appearance="outline" style="margin-top:15px; width: 93%; margin-left: 30px;">
+                <div class="row mx-0">
+                    <mat-form-field appearance="outline">
                         <mat-label>Position Description</mat-label>
-
-                        <textarea matInput style="border: none; height: 65px;" placeholder="Please enter the position description for the position that will be visible to the candidate
-
-                        "></textarea>
+                        <textarea matInput
+                            placeholder="Please enter the position description for the position that will be visible to the candidate"></textarea>
                     </mat-form-field>
                 </div>
 
-                <div class="row">
+                <div class="row mx-0">
                     <div class="col-md-6">
-                        <mat-form-field appearance="outline" style="margin-left: 40px; height: 2px; margin-top:15px; border: 0px">
+                        <mat-form-field appearance="outline">
                             <mat-label>Start Date</mat-label>
-                            <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" style="border:0px;">
-                            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                            <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY">
                             <mat-datepicker-toggle matIconSuffix [for]="picker">
-                                <!-- <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>  -->
                             </mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
                         </mat-form-field>
@@ -143,41 +82,37 @@
                     </div>
 
                     <div class="col-md-6">
-                        <mat-form-field class="example-full-width" appearance="outline"
-                            style="margin-left: -2px; height: 2px; margin-top:15px; border:0px;">
+                        <mat-form-field appearance="outline" style="height: 5px;">
                             <mat-label>End date</mat-label>
-                            <input matInput [matDatepicker]="picker1" placeholder="MM/DD/YYYY" style="border:0px;">
-                            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                            <input matInput [matDatepicker]="picker1" placeholder="MM/DD/YYYY">
                             <mat-datepicker-toggle matIconSuffix [for]="picker1">
-                                <!-- <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon> -->
                             </mat-datepicker-toggle>
                             <mat-datepicker #picker1></mat-datepicker>
                         </mat-form-field>
-
+                       
                     </div>
-</div>
-                    
-                    <div class="row">
-                        <section class="example-section" [formGroup]="assessment" style="margin-top: 120px; margin-left: 40px;" >
-                            <h4>Select Components of Assessment Process </h4>
-                            <p>
-                                <mat-checkbox formControlName="ScreeningTest">Screening Test</mat-checkbox>
-                            </p>
-                            <p>
-                                <mat-checkbox formControlName="DirectInterviewInvites">Direct Interview Invites
-                                </mat-checkbox>
-                            </p>
-                            <!-- <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p> -->
-                        </section>
+                </div>
 
-                    </div>
+                <div class="row mx-0">
+                    <section class="example-section" [formGroup]="assessment">
+                        <h4>Select Components of Assessment Process </h4>
+                        <p>
+                            <mat-checkbox formControlName="ScreeningTest">Screening Test</mat-checkbox>
+                        </p>
+                        <p>
+                            <mat-checkbox formControlName="DirectInterviewInvites">Direct Interview Invites
+                            </mat-checkbox>
+                        </p>
+                        <!-- <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p> -->
+                    </section>
 
-                <!-- </div> -->
+                </div>
+
 
 
             </form>
-            <div class="row">
-                <div class="col-md-9" style="margin-top: 15px;"> 
+            <div class="row mx-0">
+                <div class="col-md-3">
                     <button mat-raised-button color="primary" [disabled]="addCustomerForm.invalid">Submit
                         <!-- <span *ngIf="!addUserParams.userDetailsId">Submit </span> -->
                         <!-- <span *ngIf="addUserParams.userDetailsId">Update </span> -->
@@ -188,3 +123,4 @@
         <!-- <span *ngIf="addUserParams.businessId">Update</span></button> -->
     </mat-drawer-content>
 </mat-drawer-container>
+<app-footer></app-footer>
