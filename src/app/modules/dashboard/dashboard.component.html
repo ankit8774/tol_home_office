@@ -11,7 +11,7 @@
 
         <div class="row">
             <div class="col-md-6" style="">
-                <div class="mb-7 bg-white shadow-8 p-20 rounded mb-4 dashboard-screen" style="">
+                <div class="mb-7 bg-white shadow-8 rounded mb-4 dashboard-screen" style="">
                     <mat-tab-group animationDuration="0ms" class="mat-tab-header-pagination-disabled">
                         <mat-tab label="OverAll Usage"></mat-tab>
                         <mat-tab label="This Month"></mat-tab>
@@ -21,35 +21,37 @@
                         <div id="overall" role="tabpanel" aria-labelledby="overall-tab"
                             class="tab-pane fade active show">
                             <div class="row">
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
-                                      >
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
                                         <div class="mt-5 text-center">
                                             <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2"><img
-                                                    src="https://hire.enablex.io/images/position-circle.png"></div>
+                                               routerLink="/position"     src="assets/image/position-circle.png"></div>
                                             <p class="font-size-4 font-size-16 text-black-2 mb-2">Positions
                                             </p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter dashboard-count">3</span></h5>
+                                                <span class="counter dashboard-count">3</span>
+                                            </h5>
                                         </div>
-                                    </a></div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
-                                      >
+                                    </a>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4">
+                                    <a>
                                         <div class="mt-5 text-center">
                                             <div class="text-orange bg-orange-opacity-1 circle-56 font-size-6 mb-2"><img
-                                                    src="https://hire.enablex.io/images/screenings-circle.png"></div>
+                                                routerLink="/screening"      src="assets/image/screenings-circle.png"></div>
                                             <p class="font-size-4 font-size-16 text-black-2 mb-2">Screening Done
                                             </p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter">9</span></h5>
+                                                <span class="counter">9</span>
+                                            </h5>
                                         </div>
-                                    </a></div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4" style=""><a
-                                      >
+                                    </a>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4" style=""><a>
                                         <div class="mt-5 text-center">
                                             <div class="text-pink bg-pink-opacity-1 circle-56 font-size-6 mb-2"><img
-                                                    src="assets/image/interviews-circle.png" style="">
+                                                routerLink="/intervierCalender "          src="assets/image/interviews-circle.png" style="">
                                             </div>
                                             <p class="font-size-4 font-size-16 text-black-2 mb-2">Interviews
                                                 Done</p>
@@ -61,19 +63,19 @@
                         </div>
                         <div id="thismonth" role="tabpanel" aria-labelledby="thismonth-tab" class="tab-pane fade">
                             <div class="row">
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
-                                                                          <div class="mt-5 text-center">
+                                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
+                                        <div class="mt-5 text-center">
                                             <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2"><img
                                                     src="assets/image/position-circle.png"></div>
                                             <p class="font-size-4 font-size-16 text-black-2 mb-2">Positions
                                             </p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter">3</span></h5>
+                                                <span class="counter">3</span>
+                                            </h5>
                                         </div>
-                                    </a></div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
-                                      >
+                                    </a></div> -->
+                                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
                                         <div class="mt-5 text-center">
                                             <div class="text-orange bg-orange-opacity-1 circle-56 font-size-6 mb-2"><img
                                                     src="https://hire.enablex.io/images/screenings-circle.png"></div>
@@ -81,11 +83,11 @@
                                             </p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter">7</span></h5>
+                                                <span class="counter">7</span>
+                                            </h5>
                                         </div>
-                                    </a></div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
-                                      >
+                                    </a></div> -->
+                                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
                                         <div class="mt-5 text-center">
                                             <div class="text-pink bg-pink-opacity-1 circle-56 font-size-6 mb-2"><img
                                                     src="assets/image/position-circle.png"></div>
@@ -93,26 +95,27 @@
                                                 Done</p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter">0</span></h5>
+                                                <span class="counter">0</span>
+                                            </h5>
                                         </div>
-                                    </a></div>
+                                    </a></div> -->
                             </div>
                         </div>
                         <div id="lastmonth" role="tabpanel" aria-labelledby="lastmonth-tab" class="tab-pane fade">
                             <div class="row">
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
-                                                                          <div class="mt-5 text-center">
+                                <!-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
+                                        <div class="mt-5 text-center">
                                             <div class="text-blue bg-blue-opacity-1 circle-56 font-size-6 mb-2"><img
                                                     src="assets/image/position-circle.png"></div>
                                             <p class="font-size-4 font-size-16 text-black-2 mb-2">Positions
                                             </p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter">2</span></h5>
+                                                <span class="counter">2</span>
+                                            </h5>
                                         </div>
                                     </a></div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
-                                      >
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
                                         <div class="mt-5 text-center">
                                             <div class="text-orange bg-orange-opacity-1 circle-56 font-size-6 mb-2"><img
                                                     src="assets/image/screenings-circle.png"></div>
@@ -120,21 +123,23 @@
                                             </p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter">21</span></h5>
+                                                <span class="counter">21</span>
+                                            </h5>
                                         </div>
                                     </a></div>
-                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a
-                                      >
+                                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-4"><a>
                                         <div class="mt-5 text-center">
                                             <div class="text-pink bg-pink-opacity-1 circle-56 font-size-6 mb-2">
-                                                <img src="assets/image/interviews-circle.png" ></div>
+                                                <img src="assets/image/interviews-circle.png">
+                                            </div>
                                             <p class="font-size-4 font-size-16 text-black-2 mb-2">Interviews
                                                 Done</p>
                                             <h5
                                                 class="font-size-20 line-height-inherit font-weight-semibold text-black-2 line-height-reset font-weight-bold mb-1">
-                                                <span class="counter">13</span></h5>
+                                                <span class="counter">13</span>
+                                            </h5>
                                         </div>
-                                    </a></div>
+                                    </a></div> -->
                             </div>
                         </div>
                     </div>
@@ -149,87 +154,83 @@
                 </div>
             </div>
             <div class="col-md-6" style="">
-                <div class="bg-white shadow-8 p-20 rounded mb-4 dashboard-screen" style="">
+                <div class=" mb-7 bg-white shadow-8 p-20 rounded mb-4 dashboard-screen" style="">
                     <h3 class="mb-4">Concluded Screenings</h3>
                     <div class="Announcement-wrapper" style="line-height: initial;">
-                        <div class="download-screening"><a href="javascript:void(0)"
-                                data-link="1.MP4"
-                                data-toggle="modal" data-target="#video_1" class="mr-2"><i class="fa fa-play"></i></a>
+                        <div class="download-screening"><a href="javascript:void(0)" data-link="1.MP4"
+                            href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat" target="_blank" data-toggle="modal" data-target="#video_1" class="mr-2"><i class="fa fa-play"></i></a>
                             <div id="video_1" tabindex="-1" role="dialog" aria-labelledby="video_1Label"
-                                aria-hidden="true" class="modal fade">
-                                <div role="document" class="modal-dialog modal-lg">
+                                aria-hidden="true" class="modal fade"
+                                
+                                >
+                                <!-- <div role="document" class="modal-dialog modal-lg">
                                     <div class="modal-content">
+
                                         <div class="modal-header">
-                                            <h3><a>Sudhanshu
-                                                </a></h3> <button type="button" data-dismiss="modal" aria-label="Close"
-                                                class="close"><span aria-hidden="true">×</span></button>
+                                            <h3 routerLink="/candidateProfile">
+                                                <a >Sudhanshu  dewed</a>
+                                            </h3>
+                                            <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
                                         </div>
+
                                         <div class="modal-body"><video width="100%" height="100%" controls="controls">
-                                                <source
-                                                    src=""
-                                                    type="video/mp4">
+                                                <source src="" type="video/mp4">
                                             </video></div>
                                     </div>
-                                </div>
-                            </div> <a
-                               
-                                title="Download this recording file" download="" class="inner-screen-download"><i
+                                </div> -->
+                            </div> <a href="" title="Download this recording file" download="" class="inner-screen-download"><i
                                     class="fa fa-download"></i></a>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a 
-                                    class="a_text">
-                                    Sudhanshu
-                                </a> <span class="screen-date text-gray">Dec 07, 2022 6:08 PM</span></p>
-                            <h5 class="mb-1"><a  class="a_text"
-                                    style="">
-                                    MEAN STACK Xeedance
-                                </a></h5>
+                            <p class="mb-1">
+                                <a class="a_text" routerLink="/candidateProfile"> Sudhanshu </a>
+                                <span class="screen-date text-gray">Dec 07, 2022 6:08 PM</span>
+                            </p>
+                            <h5 class="mb-1"><a routerLink="/profilePosition" class="a_text" style=""> Full Stack
+                                    Developer </a></h5>
                         </div>
                     </div>
                     <div class="Announcement-wrapper" style="line-height: initial;">
-                        <div class="download-screening"><a href="javascript:void(0)"
-                                data-link=""
-                                data-toggle="modal" data-target="#video_2" class="mr-2"><i class="fa fa-play"></i></a>
+                        <div class="download-screening"><a href="javascript:void(0)" data-link="" data-toggle="modal"
+                                href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat"
+                                target="_blank" data-target="#video_2" class="mr-2"><i class="fa fa-play"></i></a>
                             <div id="video_2" tabindex="-1" role="dialog" aria-labelledby="video_2Label"
                                 aria-hidden="true" class="modal fade">
                                 <div role="document" class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3><a >Ajharudin
+                                            <h3><a>Ajharudin
                                                 </a></h3> <button type="button" data-dismiss="modal" aria-label="Close"
                                                 class="close"><span aria-hidden="true">×</span></button>
                                         </div>
                                         <div class="modal-body"><video width="100%" height="100%" controls="controls">
-                                                <source
-                                                   type="video/mp4">
+                                                <source type="video/mp4">
                                             </video></div>
                                     </div>
                                 </div>
-                            </div> <a
-                                
-                                title="Download this recording file" download="" class="inner-screen-download"><i
-                                    class="fa fa-download"></i></a>
+                            </div> <a title="Download this recording file" href="" download=""
+                                class="inner-screen-download"><i class="fa fa-download"></i></a>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a
-                                    class="a_text">
+                            <p class="mb-1"><a class="a_text" routerLink="/candidateProfile">
                                     Ajharudin
                                 </a> <span class="screen-date text-gray">Dec 07, 2022 3:38 PM</span></p>
-                            <h5 class="mb-1"><a class="a_text">
-                                    MEAN STACK Xeedance
+                            <h5 class="mb-1"><a class="a_text" routerLink="/profilePosition">
+                                    Full Stack Developer
                                 </a></h5>
                         </div>
-                    </div> <a  class="more-calender"><i
-                            class="fas fa-angle-right"></i> More...</a>
+                    </div>
+                    <a class="more-calender" routerLink="/screening"><i class="fa fa-angle-right"></i> More...</a>
                 </div>
                 <div class="bg-white shadow-8 p-20 rounded dashboard-screen" style="">
                     <h3 class="mb-4">Concluded Interviews</h3>
                     <div class="Announcement-wrapper" style="line-height: initial;">
-                        <div class="download-screening"><a 
-                                
-                                title="Video available to play." data-toggle="modal" data-target="#video_9999"
-                                class="mr-2"><i class="fa fa-play"></i></a></div>
+                        <div class="download-screening"><a
+                                href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat"
+                                target="_blank" title="Video available to play." data-toggle="modal"
+                                data-target="#video_9999" class="mr-2"><i class="fa fa-play"></i></a></div>
                         <div id="video_9999" tabindex="-1" role="dialog" aria-labelledby="video_9999Label"
                             aria-hidden="true" class="modal fade">
                             <div role="document" class="modal-dialog modal-lg">
@@ -240,20 +241,16 @@
                                     </div>
                                     <div class="modal-body multiple-video-playlist"><video id="videoplaylist_9999"
                                             preload="auto" tabindex="0" controls="controls" class="videoplaylist">
-                                            <source
-                                                src="" type="video/mp4">
+                                            <source src="" type="video/mp4">
                                         </video>
                                         <ul id="playlist_9999" class="playlist">
-                                            <li class="active"><a
-                                                   
-                                                    onclick="init(9999, 1, 0 ); return false;">
+                                            <li class="active"><a onclick="init(9999, 1, 0 ); return false;">
                                                     Session 1
                                                 </a></li>
-                                            <li><a 
-                                                    onclick="init(9999, 2, 1 ); return false;">
+                                            <li><a onclick="init(9999, 2, 1 ); return false;">
                                                     Session 2
                                                 </a></li>
-                                            <li><a                                               onclick="init(9999, 3, 2 ); return false;">
+                                            <li><a onclick="init(9999, 3, 2 ); return false;">
                                                     Session 3
                                                 </a></li>
                                         </ul>
@@ -262,21 +259,20 @@
                             </div>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a
-                                    class="a_text">
+                            <p class="mb-1"><a class="a_text" routerLink="/candidateProfile">
                                     Sukhdev Sukhdev
                                 </a> <span class="screen-date text-gray">Nov 10, 2022 1:06 PM</span></p>
-                            <h5 class="mb-1"><a  class="a_text">
+                            <h5 class="mb-1"><a class="a_text" routerLink="/profilePosition">
                                     Dot Net Full Stack New
                                 </a></h5>
                         </div>
                     </div>
                     <div class="Announcement-wrapper" style="line-height: initial;">
-                        <div class="download-screening"><a href="javascript:void(0)"
-                                
-                                title="Video available to play." data-toggle="modal" data-target="#video_2_interview"
-                                class="mr-2"><i class="fa fa-play"></i></a> <a
-                               title="Download this recording file" download="" class="inner-screen-download mr-2"><i
+                        <div class="download-screening"><a
+                                href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat"
+                                target="_blank" title="Video available to play." data-toggle="modal"
+                                data-target="#video_2_interview" class="mr-2"><i class="fa fa-play"></i></a> <a href=""
+                                title="Download this recording file" download="" class="inner-screen-download mr-2"><i
                                     class="fa fa-download"></i></a></div>
                         <div id="video_2_interview" tabindex="-1" role="dialog" aria-labelledby="video_2_interviewLabel"
                             aria-hidden="true" class="modal fade">
@@ -287,23 +283,22 @@
                                             aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                                     </div>
                                     <div class="modal-body"><video width="100%" height="100%" controls="controls">
-                                            <source
-                                                type="video/mp4">
+                                            <source type="video/mp4">
                                         </video></div>
                                 </div>
                             </div>
                         </div>
                         <div class="announ-content">
-                            <p class="mb-1"><a 
-                                    class="a_text">
+                            <p class="mb-1"><a class="a_text" routerLink="/candidateProfile">
                                     GIRIJA PRASAD
                                 </a> <span class="screen-date text-gray">Nov 10, 2022 1:09 PM</span></p>
-                            <h5 class="mb-1"><a  class="a_text">
+                            <h5 class="mb-1"><a class="a_text" routerLink="/profilePosition">
                                     Dot Net Full Stack New
                                 </a></h5>
                         </div>
-                    </div> <a  class="more-calender"><i
-                            class="fas fa-angle-right"></i> More...</a>
+                    </div>
+                    <a routerLink="/intervierCalender" class="more-calender"><i class="fa fa-angle-right"></i>
+                        More...</a>
                 </div>
             </div>
         </div>

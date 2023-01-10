@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,29 +12,9 @@ import { SidebarComponent } from './modules/sidebar/sidebar.component';
 
 import { UsersComponent } from './modules/users/users.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MaterialModule } from './material/material.module';
 
-import {MatTabsModule} from '@angular/material/tabs';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AddusersComponent } from './modules/users/addusers/addusers.component';
-import {MatMenuModule} from '@angular/material/menu';
-
 
 import { ClientComponent } from './modules/client/client.component';
 import { AddClientComponent } from './modules/client/add-client/add-client.component';
@@ -47,7 +27,14 @@ import { CandidateProfileComponent } from './modules/position/candidate-profile/
 import { HeaderComponent } from './modules/header/header.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { UserEditComponent } from './modules/users/user-edit/user-edit.component';
+import { CandidateprofileEditComponent } from './modules/position/candidate-profile/candidateprofile-edit/candidateprofile-edit.component';
+import { ScreeningComponent } from './modules/screening/screening.component';
+import { InterviewcalenderComponent } from './modules/dashboard/interviewcalender/interviewcalender.component';
+import { EditfaceAIComponent } from './modules/profile-position/editface-ai/editface-ai.component';
+import { EditPositionComponent } from './modules/position/edit-position/edit-position.component';
+import { ReportComponent } from './modules/profile-position/report/report.component';
 
+// import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -67,23 +54,33 @@ import { UserEditComponent } from './modules/users/user-edit/user-edit.component
     HeaderComponent,
     FooterComponent,
     UserEditComponent,
+    CandidateprofileEditComponent,
+    ScreeningComponent,
+    InterviewcalenderComponent,
+    EditfaceAIComponent,
+    EditPositionComponent,
+    ReportComponent,
+   
   ],
+
   imports: [
+    MaterialModule,
+  
     ReactiveFormsModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    NgxPaginationModule,
+    NgxPaginationModule,    
+    HttpClientModule,
 
-    MatSidenavModule, MatDialogModule, MatButtonModule, MatSelectModule, MatFormFieldModule,MatTableModule,MatInputModule,MatDatepickerModule,
-    HttpClientModule,MatIconModule,MatNativeDateModule,MatPaginatorModule,MatToolbarModule,MatSortModule,MatRadioModule,MatCheckboxModule,
-    MatProgressSpinnerModule,MatMenuModule,MatSnackBarModule,MatTooltipModule,MatIconModule,MatTabsModule
+   
 
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

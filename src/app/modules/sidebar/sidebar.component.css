@@ -4,65 +4,58 @@
 }
 
 
-/* *,
- ::after,
- ::before {
-    box-sizing: content-box;
-} */
 
+/* 
 ul li a {
     width: 100% !important;
     border: unset !important;
     font-family: Open sans;
     font-size: 13px;
     padding: 12px 0px 12px 20px;
-}
+} */
 
-ul li {
+/* ul li {
     border-bottom: 1px solid #f3f3f3;
-}
+} */
 
-ul li a.active-link {
+/* ul li a.active-link {
     background-color: #ed4544 !important;
     color: rgb(248, 245, 245) !important;
     border-radius: 2px;
-}
+} */
 
-ul li a:hover {
+/* ul li a:hover {
     background-color: #ed4544 !important;
     color: rgb(253, 252, 252) !important;
-}
+} */
 
 
 
-.side-menus nav>ul>li>a {
-    /* color: #d1d1d1; */
-    /* float: right; */
+/* .side-menus nav>ul>li>a {
+
     font-family: Open sans;
     font-size: 15px;
-}
+} */
 
 
 
-
+/* 
 ul[_ngcontent-c4] li[_ngcontent-c4] a[_ngcontent-c4] {
     width: 100% !important;
-}
+} */
 
-.menu-scroll {
-    /* overflow-x: none; */
-    /* height: 700.5px; */
+/* .menu-scroll {
     height: 100%;
     height: inherit;
     overflow: hidden !important;
-}
+} */
 
 
 
-.mat-drawer-inner-container {
+/* .mat-drawer-inner-container {
     overflow: hidden !important;
-}
+} */
 
-.side-menus nav>ul>li>a>i {
+/* .side-menus nav>ul>li>a>i {
     width: 22px;
-}
+} */

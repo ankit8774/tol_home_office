@@ -1,0 +1,145 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header></app-header>
+
+
+
+        <div class="row sub-title">
+
+            <div class="col-md-12 mt-4 " style="margin-left: 19px;">
+
+                <!-- <a routerLink="/client" class="d-inline-flex align-items-center back text-gray font-weight-bold">
+                    <i class="fa fa-angle-left circle-40 bg-white mr-5 left-profile" style="margin-right: 10px;"></i>
+                    Client List
+                </a> -->
+
+                <!-- <h2 routerLink="/business" style="margin-top:10px; margin-left: 930px; cursor: pointer"><i
+                        class="fa fa-backward"></i> Client List</h2> -->
+            </div>
+        </div>
+
+
+        <div class="shadow-4 ml-2 mt-4">
+            <form #addCustomerForm="ngForm">
+
+                <div class="row mx-0">
+
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label> First Name</mat-label>
+                            <input matInput id="firstName" name="firstName" #firstName="ngModel" ngModel class="form-control" required>
+                        </mat-form-field>
+                    </div>
+
+
+                    <div class="col-md-6 d-grid gap-3">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput id="lastName" #lastName="ngModel" type="text" ngModel name="lastName" class="form-control" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row mx-0 ">
+
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Email</mat-label>
+                            <input matInput id="email" class="form-control" #email='ngModel' required name="email"
+                                type="email" ngModel email="true"
+                                pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
+                            <mat-error *ngIf="email.errors &&(email.touched || email.dirty)">
+                                Please Enter Valid Email
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Phone</mat-label>
+                            <input matInput id="phone" #phone='ngModel' ngModel phone="true" class="form-control" name="phone"   maxlength="10" minlength="10" required>
+                            <mat-error *ngIf="phone.errors &&(phone.touched || phone.dirty)">
+                                Please Enter Valid phone
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div class="row mx-0 ">
+                    <div class="col-md-6">
+                        <!-- <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Profile Image</mat-label>
+                            <input matInput id="lastName" class="form-control" name="lastName" required>
+                            <button mat-raised-button type="file"></button>
+                        </mat-form-field> -->
+
+                        <button style="margin-left: 5px;" type="button" mat-raised-button
+                                        (click)="fileInput.click()">Choose
+                                        File</button>
+                                    <input hidden #fileInput type="file" id="file"> &nbsp;
+                                    <span class="file-name">{{selectedFile?.name}}</span>
+                                    <span *ngIf="selectedFile!==0">No File Choosen</span>
+                    </div>
+                
+                <div class="col-md-6">
+                    <!-- <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label> Resumne/CV</mat-label>
+                        <input matInput id="lastName" class="form-control" name="lastName"  required>
+                    </mat-form-field> -->
+                    <button style="margin-left: 5px;" type="button" mat-raised-button
+                    (click)="fileInput.click()">Choose
+                    File</button>
+                <input hidden #fileInput type="file" id="file"> &nbsp;
+                <span class="file-name">{{selectedFile?.name}}</span>
+                <span *ngIf="selectedFile!==0">No File Choosen</span>
+
+                </div>
+            </div>
+
+
+                <div class="row mx-0 ">
+                    <div class="col-md-12 d-grid gap-3">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> External Ref </mat-label>
+                            <input matInput id="Password" class="form-control" name="Password" required>
+                        </mat-form-field>
+                    </div>
+
+                    <!-- <div class="col-md-4 d-grid gap-3">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> State </mat-label>
+                            <input matInput id="Password" class="form-control" name="Password" required>
+                        </mat-form-field>
+                    </div> -->
+
+                    <!-- <div class="col-md-4 d-grid gap-3">
+                        <mat-form-field appearance="outline" placeholder="Select User Type">
+                            <mat-label> Country</mat-label>
+                            <mat-select name="user" id="user">
+
+                                <mat-option [value]='1003'>India</mat-option>
+                                <mat-option [value]='1007'>Russia</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div> -->
+                </div>
+            </form>
+
+            <div class="row mx-0 ">
+                <div class="col-md-12">
+                    <button mat-raised-button color="primary" [disabled]="addCustomerForm.invalid">Submit
+                        <!-- <span *ngIf="!addBusinessParams">Submit </span> -->
+                        <!-- <span *ngIf="addBusinessParams">Update </span> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- <span *ngIf="addUserParams.businessId">Update</span></button> -->
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>

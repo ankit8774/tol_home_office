@@ -1,0 +1,83 @@
+<!-- <ngx-loading [show]="loading"></ngx-loading> -->
+<mat-drawer-container>
+  <mat-drawer mode="side" opened="true">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header></app-header>
+
+
+    <div class="main-content">
+
+
+      <div class="row sub-title">
+        <div class="col-md-2 text ">
+          <h5>Edit Face AI</h5>
+        </div>
+
+        <div class="col-md-10" style="margin-right: 0px;">
+          <a routerLink="/profilePosition" class="d-inline-flex align-items-center back text-gray font-weight-bold">
+            <i class="fa fa-angle-left circle-40 bg-white mr-5 left-profile"></i>
+            Company Profile
+          </a>
+        </div>
+      </div>
+
+      <div class="padd_colx5 pad_20 shadow-4">
+        <div class="table-responsive">
+
+          <table class="table table-striped">
+            <colgroup>
+              <!-- <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;"> -->
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th> Visulization</th>
+                <th>Select</th>
+                <th>Set Order</th>
+
+              </tr>
+            </thead>
+
+            <tbody #empty>
+              <tr *ngFor="let title of title">
+                <td>{{title }} (Positive)</td>
+                <td>Graphical</td>
+
+                <td>
+                  <label class="checkbox-label form-group">
+                    <input type="checkbox" id="widgets_1" value="1"  checked="checked" name="widgets[]">
+                    <span class="checkbox-custom rectangular"></span>
+                  </label>
+                </td>
+                <!-- <td style=""><mat-checkbox></mat-checkbox></td> -->
+
+                <td>
+                  <select name="" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          
+        </div>
+        <td>
+        <button mat-raised-button>Submit</button>
+      </td>
+      </div>
+
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

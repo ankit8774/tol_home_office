@@ -35,13 +35,12 @@
             </h2>
         </div> -->
 
-        <div class="shadow-4 ml-2">
+        <div class="shadow-4">
             <form #addCustomerForm="ngForm">
 
+                <div class="row mx-0">
 
-                <div class="row  mx-0">
-
-                    <div class="col-md-6 adduser">
+                    <div class="col-md-6  d-grid">
                         <mat-form-field appearance="outline">
                             <mat-label> First Name</mat-label>
                             <input matInput id="firstName" name="firstName" class="form-control" #firstName='ngModel'
@@ -49,7 +48,7 @@
                         </mat-form-field>
                     </div>
 
-                    <div class="col-md-6 adduser">
+                    <div class="col-md-6  d-grid">
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> Last Name</mat-label>
                             <input matInput id="lastName" class="form-control" #lastName='ngModel' name="lastName"
@@ -61,7 +60,7 @@
 
                 <div class="row mx-0">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-grid">
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Email</mat-label>
                             <input matInput id="email" class="form-control" #email='ngModel' required name="email"
@@ -75,17 +74,17 @@
 
 
 
-                    <div class="col-md-6 d-grid gap-3">
+                    <div class="col-md-6 d-grid">
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> Password </mat-label>
-                            <input matInput id="Password" name="password" class="form-control" required="true">
+                            <input matInput id="Password" type="password" name="password" class="form-control" required="true">
                         </mat-form-field>
                     </div>
 
                 </div>
 
-                <div class="row mx-0 d-grid gap-3">
-                    <div class="col-md-12 mt-0 pt-0">
+                <div class="row mx-0">
+                    <div class="col-md-12 d-grid">
                         <mat-form-field appearance="outline" >
                             <mat-label> User Type</mat-label>
                             <mat-select name="user" id="user">
@@ -99,10 +98,10 @@
             </form>
             <div class="row mx-0">
                 <div class="col-md-3"   >
-                    <button mat-raised-button color="primary" (click)="createUser()"
+                    <button mat-raised-button (click)="createUser()"
                         [disabled]="addCustomerForm.invalid">
                         <span *ngIf="!addUserParams.userDetailsId">Submit </span>
-                        <span *ngIf="addUserParams.userDetailsId">Update </span>
+                        <!-- <span *ngIf="addUserParams.userDetailsId">Update </span> -->
                     </button>
                 </div>
             </div>

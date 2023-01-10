@@ -1,169 +1,124 @@
 .mat-form-field {
-    width: 100%;    
-    display: block;
-    margin-left: 1px;
-    border: none;
-    margin-top: 10px;
-   padding-top: 1px;
-   /* padding-bottom: -111px; */
-   padding: auto;
+  width: 100%;
+  display: block;
+  margin-left: 1px;
+  border: none;
+  margin-top: 10px;
+  padding-top: 1px;
+  padding: auto;
+  font: 400 12px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  background-color: white;
 
-   /* .mat-body, .mat-body-1, .mat-typography .mat-body, .mat-typography .mat-body-1, .mat-typography { */
-    font: 400 12px Roboto, "Helvetica Neue", sans-serif;
-    letter-spacing: normal;
-    background-color: white;
 }
-  
-  
-  
 
-  
-  /* .mat-dialog-title {
-    color: darkgray;
-    margin-left: 5%;
-  }
-   */
-  /* .mat-raised-button {
-    margin-bottom: 10px;
-    margin-left: 5%;
-  } */
-  
-  /* .example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  } */
-/*   
-  .example-events {
-    width: 300px;
-    height: 200px;
-    overflow: auto;
-    border: 1px solid #555;
-  } */
-  
-  /* :host {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  } */
-  
-  mat-drawer {
+
+.padd_colx5 {
+  padding: 0px 33px;
+}
+
+
+/* mat-drawer {
     width: 255px;   
     margin-top: 0px;
-  }
-  
-  mat-drawer-container {
+  } */
+
+/* mat-drawer-container {
     height: 91%;
     background-color: #F6F9FA;     
     overflow-y: hidden;
     overflow-x: hidden;
 
-  }
-  mat-drawer-content {
+  } */
+/* mat-drawer-content {
     overflow-x: hidden;
     overflow-y: hidden;
-  }
+  } */
 
-  
-  /* .logo {
-    text-align: center;
-    padding: 3.6rem 1rem;
-  
-  } */
-  
-  /* .mat-icon {
-    vertical-align: center;
-    margin-right: 1rem;
-  } */
-  
-  /* .mat-divider {
-    border-top-width: 3px;
-    border-color: antiquewhite;
-  } */
-  
-  /* .mat-list-item {
-    color: white !important;
-    font-size: 0.8rem;
-    height: 44px !important;
-    margin-bottom: 4px;
-    border-radius: 5px;
-    margin: 0 8px;
-  
-  } */
-  
-  .mat-list-item:hover {
+
+
+
+/* .mat-list-item:hover {
     background: #025353 !important;
     font-family: 'lato';
-  }
-  
-  
-  .form-control {
+  } */
+
+
+/* .form-control {
     border: 0px;
     font-family: 'lato';
-    /* width: 100%; */
-    /* display: block; */
-  }
-  
- 
-  .mat-raised-button {
+   
+  } */
+
+
+/* .mat-raised-button {
     background: #ed4544;
-    /* box-shadow: 5px 5px 12px rgb(30, 30, 30); */
+   
     color: white;
     font-family: 'lato';
-  }
-  
- 
-  
-  .shadow-4 {
-  
-    margin-left: 80px;
-    height: 290px;
-    width: 950px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
-    border-radius: 10px;
-   margin-top: 10px;
-   background-color: white;
-  
-  }
-  
+  } */
+  .p-20 {
+    padding: 18px;
+}
 
-  
-  .title {
+
+.shadow-4 {
+  margin-left: 80px;
+  height: 290px;
+  width: 950px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+
+
+/* .title {
     background: darkblue;
     color: white;
-    height: 50px;
-    /* text-align: left; */
-    font-weight: bold;
-    /* margin-top: 0px; */
+    height: 50px; 
+    font-weight: bold;  
     position: relative;
     justify-content: space-between;
     display: flex;
-  }
+  } */
 
-  .circle-40 {
-    max-width: 40px;
-    min-width: 40px;
-    max-height: 40px;
-    min-height: 40px;
-    border-radius: 500px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+.circle-40 {
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  min-height: 40px;
+  border-radius: 500px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
-.back{
-color:black;
-text-decoration:none;
-float: right;
+.back {
+  color: black;
+  text-decoration: none;
+  float: right;
 }
 
 .mx-0 {
-  position:relative;
+  position: relative;
   left: 150;
   right: 10;
   bottom: 150;
   top: 100;
   display: flex;
 }
+
+/* .mat-form-field {
+  width: 100%;
+  
+  display: block;
+  margin-left: 1px;
+  border: none;
+  margin-top: 10px;
+  padding-top: 1px;
+  font: 400 12px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+  background-color: white;
+} */

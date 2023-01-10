@@ -1,128 +1,70 @@
 
-.main-content {
+/* .main-content {
     padding: 0px 20px;
-    /* padding: 66px 27px 106px 0px; */
-    /* text-align: center; */
-    font-family: 'open-sans';
-    /* background-color: #F6F9FA; */
-  }
+    
+  } */
   
-  mat-drawer-container {
+  /* mat-drawer-container {
     background-color: #F6F9FA;
     color: rgba(0, 0, 0, .87);
     height: 91%;
-  }
-  mat-drawer {
+  } */
+  /* mat-drawer {
     width: 255px;   
     margin-top: 0px;
-    /* overflow-x: hidden; */
-  }
-  mat-drawer-content {
-    /* overflow-x: hidden; */
+   
+  } */
+  /* mat-drawer-content {
+   
     overflow-y: hidden;
-  }
-  
-  table {
-    background-color: #fff;
-  }
-  
-  
-  /* .table{
-  --bs-table-striped-bg: #8cfcef;
   } */
   
-  .mat-raised-button {
-    /* width: 85px; */
+  /* table {
+    background-color: #fff;
+  } */
+  
+  
+  /* .mat-raised-button {
     height: 35px;
     font-size: 0.875rem;
     background: #ed4544;
     border: solid 1px #ed4544;
-    /* box-shadow: 5px 5px 12px rgb(30, 30, 30); */
     color: white;
     font-family: 'lato';
     letter-spacing: 0.06em;
     font-family: Lato-Black;
-  }
+  } */
   
   
   
   
   
-  .custom-pagination ::ng-deep .ngx-pagination .current {
+  /* .custom-pagination ::ng-deep .ngx-pagination .current {
     background: #409da9;
-  }
+  } */
   
-  .custom-pagination {
+  /* .custom-pagination {
     float: right;
-  }
+  } */
   
-  .li_box_sis {
-    box-sizing: unset !important;
-  }
   
-  .main-nav>h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: Lato-Black;
-  }
   
-  .main-nav {
-    padding-top: 20px;
-  }
-  
-  .card_shadow {
-    border: unset;
-    border-radius: unset;
-    box-shadow: rgb(50 50 93 / 0%) 0px 6px 12px -2px, rgb(0 0 0 / 20%) 0px 3px 7px -2px;
-  }
-  
-  .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-  }
-  
-  .card .card-header {
-    background: transparent;
-    border-radius: 0px;
-    border-bottom: 0px;
-    padding: 20px 20px 0px 20px;
-    /* z-index: 3;
-    min-height: 48px; */
-  }
-  
-  .padd_colx5 {
+  /* .padd_colx5 {
     padding: 0px 5px;
-  }
+  } */
   
-  .box_equal>span {
-    color: #212529;
-    font-weight: 800;
-    font-size: 13px;
-    align-items: center;
-    letter-spacing: 0.06em;
-    font-family: Lato-Black;
-  }
   
-  .padd_box_sis {
-    text-align: left;
-    padding: 0px 5px 5px 20px;
-    margin: 0px 0px;
-  }
   
-  .padd_box_sis h1 {
-    font-family: Lato-Black;
-  }
-  
-  table tr td {
+  /* table tr td {
     border: unset;
     vertical-align: middle;
     font-size: 13px !important;
     padding: 10px 20px !important;
     vertical-align: middle;
     font-family: Lato-Black;
-  }
+  } */
   
-  table tr th {
+  /* table tr th {
     border: unset;
     font-size: 13px;
     color: #212529;
@@ -130,69 +72,63 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
     font-family: Lato-Black;
-  }
+  } */
   
-  .pad_20 {
+  /* .pad_20 {
     padding-top: 20px;
-  }
+  } */
   
-  .title{
+  /* .title{
     background:darkblue;
     color: white;
     height: 50px;
-    /* text-align: left; */
   font-weight: bold;
-  /* margin-top: 0px; */
   position: relative;
   justify-content: space-between;
     display: flex;
-  }
-  .sub-title {
+  } */
+
+  /* .sub-title {
     margin-top: 25px;
-    /* font-weight: bold; */
-    /* position: relative; */
     justify-content: space-between;
     display: flex;
     margin-left: 4px;
     font-weight: bold;
-  }
+  } */
   
-  .sub-title button {
-    /* width: 30%; */
+  /* .sub-title button {
     text-justify: auto;
-    /* display: flex; */
     float: right
-  }
+  } */
   
-  .text {
+  /* .text {
     font-size: 50px;
     font-family: sans-serif;
     font-weight: bold;
-  }
+  } */
   
-  .text h5 {
+  /* .text h5 {
     font-size: 18px;
     font-family: sans-serif;
     font-weight: 500;
     margin-top: 2px;
-  }
-  .total {
+  } */
+  /* .total {
     margin-top: -20px;
     margin-left: 17px;
     font-weight: bold;
-  }
-  .go {
-  height: 49px;
-  /* padding: 7px 14px 0 14px; */
-}
-.mx-0 {
+  } */
+  /* .go {
+  height: 49px;} */
+
+  /* .mx-0 {
   margin-right: 210px !important;
   margin-left: 0 !important;
   margin-top: 25px;
-}
+} */
 
   
-  .myInput{    
+  /* .myInput{    
     box-sizing: border-box;
     background-image: url('https://www.w3schools.com/howto/searchicon.png');
     background-position: 14px 12px;
@@ -201,21 +137,20 @@
     padding: 10px 15px 7px 40px;
     border: none;
     border-bottom: 1px solid #ddd;
-  }
+  } */
 
 
-  .modal-body textarea{
+  /* .modal-body textarea{
 border: 0px;
-/* width: 150%; */
-  }
+  } */
 
-  .row {
+  /* .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
-  }
+  } */
   
-  .padd_colx5 {
+  /* .padd_colx5 {
     padding: 0px 33px;
-  }
+  } */
 
   

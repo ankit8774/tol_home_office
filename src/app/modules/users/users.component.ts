@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
   searchText: any
   constructor(private headerTitleService:ServicesService ) { }
 
-  pageChangeEvent(event: number) {
+  pageChangeEvent() {
     // this.p = event;
     // this.getUserDetails();
   }

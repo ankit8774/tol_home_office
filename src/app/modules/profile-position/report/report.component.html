@@ -1,0 +1,241 @@
+<!-- <ngx-loading [show]="loading"></ngx-loading> -->
+<mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header></app-header>
+
+        <div class="main-content">
+            <!-- <div class="row">
+            <div class="title">
+                <h3>Users List(7)</h3>
+                <h2>Welcome to Enablex Hire!</h2>
+            </div>
+        </div>   -->
+
+            <div class="row sub-title">
+                <div class="col-md-8 text">
+
+                    <h5>Face AI Score Comparison</h5>
+                </div>
+                <div class="col-md-4">
+                    <button mat-raised-button [matMenuTriggerFor]="menu">Export</button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item href="" download=""><a href="" download=""> Download Report </a></button>
+                        <button mat-menu-item href="" download=""><a href="" download="">Download AI Raw Data</a>
+                        </button>
+                    </mat-menu>
+                </div>
+                <span style="font-weight: 200;">The score values shown have range of 0 to 10, and are rounded off to 1
+                    decimal place.</span>
+            </div>
+
+            <!-- <div *ngIf="loading" class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div> -->
+
+
+        </div>
+
+        <div class="row sub-title">
+            <div class="col-md-6 text total mt-2">
+                <h5>Total: 7</h5>
+            </div>
+        </div>
+
+
+        <div class="col-12 padd_colx5 pad_20">
+            <div class="table-responsive">
+
+                <table class="table table-striped" datatable>
+                    <colgroup>
+                    <!-- <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;">
+                    <col style="width: 20%;"> -->
+                   
+                </colgroup>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th> Name</th>
+                            <th>Duration</th>
+                            <th>Progress</th>
+                            <th>Attention</th>
+                            <th>Confident</th>
+                            <th>Interested</th>
+                            <th>Determined</th>
+                            <th>Enthusiastic</th>
+                            <th>Status</th>
+                            <th>Transcript</th>
+                            <th>Rec.</th>
+                        </tr>
+                    </thead>
+
+                    <tbody #empty>
+                        <tr *ngFor="let u of userList  let i=index ">
+                            <td>{{i+1}}</td>
+                            <td>Ankit</td>
+                            <td>00:03:22</td>
+                            <td>3/3</td>
+                            <td>7.4</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>3.6</td>
+                            <td>1.5</td>
+                            <td>
+                                <ng-template #content let-modal>
+                                    <div class="modal-header">
+                                        <h4 class="title1">Screening Feedback (0)</h4>
+                                        <!-- <a href="">
+                                                <h4 class="title1">Post FeedBack ?</h4>
+                                            </a> -->
+
+                                        <button type="button" class="btn-close" aria-label="Close"
+                                            (click)="modal.dismiss('Cross click')"></button>
+                                    </div>
+
+                                    <div class="modal-body ">
+                                        <p>FeedBack Date : Dec 16,2022</p>
+
+                                        <ngb-rating [(rate)]="currentRate"></ngb-rating>
+                                        <br> <br>
+
+                                        <p>Recommend:</p>
+
+                                        <mat-form-field appearance="outline" class="col-md-12">
+                                            <!-- <mat-label>Select</mat-label> -->
+                                            <mat-select placeholder="Select">
+                                                <!-- <mat-option value="Sl"></mat-option> -->
+                                                <mat-option value="Sl">Shortlist</mat-option>
+                                                <mat-option value="Hold">Hold</mat-option>
+                                                <mat-option value="reject">Reject</mat-option>
+
+                                            </mat-select>
+                                        </mat-form-field>
+
+
+                                        <p>Comment :</p>
+                                        <mat-form-field appearance="outline" class="col-md-12">
+
+                                            <textarea matInput type="text" placeholder="Your Feedback Here"></textarea>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button mat-raised-button type="button"
+                                            (click)="modal.close('Close click')">Submit Feedback</button> &nbsp;
+                                        <button mat-raised-button type="button"
+                                            (click)="modal.close('Close click')">Submit & Close</button>
+
+                                    </div>
+                                </ng-template>
+                                <a title="Position Profile" style="color: #3490dc; text-decoration: none; 
+                                background-color: transparent; cursor:pointer"
+                                (click)="openBackDropCustomClass(content)">Feedback Pending</a>
+                       
+
+                                
+                            </td>
+
+                            <td>
+
+
+                                <ng-template #content1 let-modal>
+                                    <div class="modal-header">
+                                        <h4 class="title1">Transcript : Kristen Manning</h4>
+                                        <!-- <a href="">
+                                                <h4 class="title1">Post FeedBack ?</h4>
+                                            </a> -->
+
+                                        <button type="button" class="btn-close" aria-label="Close"
+                                            (click)="modal.dismiss('Cross click')"></button>
+                                    </div>
+
+                                    <div class="modal-body ">
+
+
+                                        <textarea readonly style="border: 0.5em;  background: #f2f2f2; height:150px; width: 100%;">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, placeat,
+ullam unde magnam quisquam quaerat perspiciatis consequatur nemo dolore,
+eveniet minus impedit! Beatae voluptatum delectus veritatis, laudantium quos
+expedita deserunt?
+Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </textarea>
+
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <!-- <button mat-raised-button type="button"
+                                            (click)="modal.close('Close click')">Submit Feedback</button> &nbsp; -->
+                                        <button mat-raised-button type="button"
+                                            (click)="modal.close('Close click')">Close</button>
+
+                                    </div>
+                                </ng-template>
+
+                                <button mat-raised-button (click)="openBackDropCustomClass1(content1)">Transcript</button>
+
+
+                                <!-- <ng-template #content let-modal>
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Modal title</h4>
+                                        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>One fine body&hellip;</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                                    </div>
+                                </ng-template>-->
+
+
+
+                            </td>
+                            <td>
+
+
+
+
+                                <div class="download-screening"><a href="javascript:void(0)" data-link="1.MP4"
+                                        href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat"
+                                        target="_blank" data-toggle="modal" data-target="#video_1" class="mr-2"><i
+                                            class="fa fa-play"></i></a>
+                                    <div id="video_1" tabindex="-1" role="dialog" aria-labelledby="video_1Label"
+                                        aria-hidden="true" class="modal fade">
+
+                                    </div>
+                                    <a href="" title="Download this recording file" download=""
+                                        class="inner-screen-download"><i class="fa fa-download"></i></a>
+                                </div>
+
+
+
+
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <ng-template #no_data_templ *ngIf="searchText==null"> NO DATA FOUND</ng-template>
+
+                <pagination-controls class="custom-pagination" (pageChange)="pageChangeEvent($event)">
+                </pagination-controls>
+
+            </div>
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

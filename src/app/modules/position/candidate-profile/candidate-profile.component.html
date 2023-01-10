@@ -3,46 +3,40 @@
         <app-sidebar></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>
-        <br>
+        <app-header></app-header>
 
-        <div class="row">
+        <div class="main-content">
+            <div class="row sub-title">
+                <div class="col-md-8 text">
 
+                    <h5>Candidate Profile</h5>
+                </div>
 
-            <div class="title">
-                <h3>Ankit Srivastava</h3>
-                <h2>Welcome to Enablex Hire!</h2>
             </div>
-
         </div>
-        <!--         
-        <div class="col ">
-            <h2 routerLink="/user" style="margin-top:10px; margin-left: 970px; cursor: pointer"><i class="fa fa-backward"></i> Users</h2>
-        </div> -->
-        <h3> <b> Candidate Profile </b></h3>
-
         <div class="shadow-4">
             <div class="row ">
                 <div class="title1">
-                    <div class="col-md-6">
+                    <div class="col-md-7">
 
-                        <div class="col-md-12 contact-by">
-                            <h3 class="font-size-6">Ankit Srivastava </h3>
+                        <div class="col-md-6 mt-3 contact-by">
+                            <h2 class="font-size-6">Ankit Srivastava </h2>
 
-                            <div class="mb-0 d-flex">
-                                <p class="font-size-4 text-gray mb-0 mr-3">E-mail</p>&nbsp;
-                                <p class="mb-0"><b><a href="mailto:ankit@gmail.com"
-                                            class="text-black-2">ankit@gmail.com</a></b>
+                            <div class=" d-flex mt-0">
+                                <p class="font-size-4 mb-0  text-gray mr-3">E-mail</p>
+                                <p class="mb-0">
+                                    <b><a href="mailto:ankit@gmail.com" class="text-black-2">ankit@gmail.com</a></b>
                                 </p>
                             </div>
 
-                            <div class="mb-0 mt-3 d-flex">
+                            <div class="mb-0 mt-2 d-flex">
                                 <p class="font-size-4 text-gray mb-0 mr-3">Added Date </p> &nbsp;
                                 <p class="mb-1"><b> Dec 07,2022 </b></p>
                             </div>
 
                             <div class="mb-0 d-flex">
                                 <p class="font-size-4 text-gray mb-0 mr-3">Added By </p>&nbsp;
-                                <p class="mb-0"><b> Pervesh </b></p>
+                                <p class="mb-0"><b> Abhishek </b></p>
                             </div>
 
                             <div class="mb-0 d-flex">
@@ -50,25 +44,58 @@
                                 <p class="mb-0"><b> Dec 07, 2022 2:08 PM </b></p>
                             </div>
 
-                            <!-- <div class="candidate-file candidate-file-edit" style="cursor: pointer; "><img
-                            src="https://hire.enablex.io/images/profile-image.png" alt=""
-                            class="avatar img_prv"
-                            style="height: 100px; margin-left: 20px; ">
-                        </div> -->
+                            <!-- <div class="mb-0 mt-0 d-flex">
+                                <a title="Edit Candidate Profile" data-toggle="tooltip" data-placement="top"
+                                    id="edit_candidate_profile" class="mb-1 mr-3">
+
+                                    <button type="button" class="btn btn-labeled" routerLink="/candidateprofileEdit">
+                                        <span class="btn btn-label"><i class="fa fa-edit"></i></span>Edit
+                                    </button>
+                                </a>
+                            </div> -->
+
+                            <div class="mb-0 mt-1 d-flex">
+                                <mat-button-toggle-group name="" class="mb-2 mr-4"
+                                    style="height: 35px; align-items: center;" routerLink="/candidateprofileEdit">
+                                    <mat-button-toggle value="bold" style="background: gray; "><i
+                                            class="fa fa-edit"></i></mat-button-toggle>
+                                    <mat-button-toggle value="bold">Edit</mat-button-toggle>
+                                </mat-button-toggle-group>
+                            </div>
                         </div>
                     </div>
-                    <div class="col md-6">
 
+                    <div class="col md-6">
+                        <!-- 
                         <div class="candidate-file candidate-file-edit" style="cursor: pointer; ">
                             <img src="https://hire.enablex.io/images/profile-image.png" alt=""
                                 style="height: 100px; margin-left: 200px; margin-top: 30px; ">
+                        
 
                             <i class="fa fa-camera camera-edit" style="margin-top: 1px;margin-left:200px;"></i>
+                            <input type="file" id="profile_image" name="profile_image"
+                                class="candidtae_profile_img candidtae_profile_img_edit"> -->
+
+
+
+
+                        <div class="text-center" style="position: relative;">
+                            <div class="candidate-file candidate-file-edit" style="cursor: pointer;"><img
+                                    src="https://hire.enablex.io/images/profile-image.png" alt="" class="avatar img_prv"
+                                    style="height: 100px; margin-left: 70px; margin-top: 40px;"></div>
+                            <div id="userActions" class="square-144 m-auto px-6 mb-7"><i
+                                    class="fa fa-camera camera-edit"></i> <input type="file" id="profile_image"
+                                    name="profile_image" class="candidtae_profile_img candidtae_profile_img_edit">
+                                <span id="mgs_ta" class="text-danger"></span>
+                            </div>
+
+
+
 
                         </div>
 
 
-                        <div id="userActions" class="square-144 m-auto px-6 mb-7">
+                        <!-- <div id="userActions" class="square-144 m-auto px-6 mb-7">
                             <input type="file" id="profile_image" name="profile_image"
                                 class="candidtae_profile_img candidtae_profile_img_edit">
                             <span id="mgs_ta" class="text-danger"></span>
@@ -77,17 +104,18 @@
                                 <button type="button" class="btn btn-labeled"><span class="btn-label"><i
                                             class="fa fa-edit"></i></span>Edit
                                 </button></a>
-                        </div>
+                        </div> -->
                     </div>
+
 
                 </div>
             </div>
 
-            <div class="row">
 
+            <div class="row mt-12">
 
                 <div class="mb-5">
-                    <h3 class="font-size-6">Associated Positions</h3>
+                    <h3 class=" ml-3 font-size-6">Associated Positions</h3>
                     <div class="scroll-table">
                         <table id="interview-table" class="table table-striped dashboard-table mb-0 review">
                             <thead>
@@ -105,23 +133,28 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td><a href="https://hire.enablex.io/client/campaign/show/175"
-                                            title="MEAN STACK Xeedance" data-toggle="tooltip"
-                                            class="media min-width-px-235 align-items-center position-text">MEAN STACK
-                                            Xeedance</a></td>
+                                    <td><a title="MEAN STACK Xeedance" data-toggle="tooltip"
+                                            routerLink="/profilePosition"
+                                            class="media min-width-px-235 align-items-center position-text">Full Stack
+                                            Developer
+                                        </a>
+                                    </td>
+
                                     <td>
-                                        <div class="download-screening"><a href="javascript:void(0)"
-                                                data-link="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4"
-                                                title="Video available to play." data-toggle="modal"
-                                                data-target="#video_1" class="mr-2"><i class="fa fa-play"></i></a> <a
-                                                href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4"
-                                                title="Download this recording file" download=""
-                                                class="inner-screen-download mr-2"><i class="fa fa-download"></i></a> <a
+                                        <div class="download-screening">
+                                            <a href="javascript:void(0)" title="Video available to play."
+                                                data-toggle="modal"
+                                                href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat"
+                                                target="_blank" data-target="#video_1" class="mr-2">
+                                                <i class="fa fa-play"></i></a>
+                                            <a href="" title="Download this recording file" download=""
+                                                class="inner-screen-download mr-2"><i class="fa fa-download"></i></a>
+                                            <!-- <a
                                                 data-toggle="modal" data-target="#candidateFaceAiModal"
                                                 href="javascript:void(0)" data-campaign="175" data-candidate="92259"
                                                 data-screening="7882" class="inner-screen-download AI-download mr-2">
                                                 AI
-                                            </a>
+                                            </a> -->
                                             <div id="video_1" tabindex="-1" role="dialog" aria-labelledby="video_1Label"
                                                 aria-hidden="true" class="modal fade">
                                                 <div role="document" class="modal-dialog modal-lg">
@@ -134,16 +167,69 @@
                                                         </div>
                                                         <div class="modal-body"><video width="100%" height="100%"
                                                                 controls="controls">
-                                                                <source
-                                                                    src="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4"
-                                                                    type="video/mp4">
+                                                                <source src="" type="video/mp4">
                                                             </video></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
                                     </td>
-                                    <td><a title="Candidate Screening Review" href="javascript:void(0)"
+
+
+                                    <td>
+                                        <ng-template #content let-modal>
+                                            <div class="modal-header">
+                                                <h4 class="title">Screening Feedback</h4>
+                                                <button type="button" class="btn-close" aria-label="Close"
+                                                    (click)="modal.dismiss('Cross click')"></button>
+                                            </div>
+
+                                            <div class="modal-body ">
+                                                <p>FeedBack Date : Dec 16,2022</p>
+
+                                                <ngb-rating [(rate)]="currentRate"></ngb-rating>
+                                                <br> <br>
+
+                                                <p>Recommend:</p>
+
+                                                <mat-form-field appearance="outline" class="col-md-12">
+                                                    <!-- <mat-label>Select</mat-label> -->
+                                                    <mat-select placeholder="Select">
+                                                        <!-- <mat-option value="Sl"></mat-option> -->
+                                                        <mat-option value="Sl">Shortlist</mat-option>
+                                                        <mat-option value="Hold">Hold</mat-option>
+                                                        <mat-option value="reject">Reject</mat-option>
+
+                                                    </mat-select>
+                                                </mat-form-field>
+
+
+                                                <p>Comment :</p>
+                                                <mat-form-field appearance="outline" class="col-md-12">
+
+                                                    <textarea matInput type="text"
+                                                        placeholder="Your Feedback Here"></textarea>
+                                                </mat-form-field>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button mat-raised-button type="button"
+                                                    (click)="modal.close('Close click')">Submit Feedback</button> &nbsp;
+                                                <button mat-raised-button type="button"
+                                                    (click)="modal.close('Close click')">Submit & Close</button>
+
+                                            </div>
+                                        </ng-template>
+
+                                        <a title="Position Profile" style="color: #3490dc; text-decoration: none; 
+                                            background-color: transparent; cursor:pointer"
+                                            (click)="openBackDropCustomClass(content)">Feedback Pending</a>
+                                    </td>
+
+
+
+                                    <!-- <a title="Candidate Screening Review" href="javascript:void(0)"
                                             data-toggle="modal" data-target="#screeningReviewModal_1"> Feedback
                                             Pending</a>
                                         <div id="screeningReviewModal_1" role="dialog" aria-labelledby="video_1 7882"
@@ -169,69 +255,71 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </td> -->
+                                    <td>
+                                        <P>N/A</P>
                                     </td>
                                     <td>
-                                        N/A
+                                        <P>N/A</P>
                                     </td>
-                                    <td>
-                                        N/A
-                                    </td>
+
+
                                     <td><a title="View Candidate Timeline" data-toggle="tooltip" data-placement="top"
                                             href="javascript:void(0)" data-campaign="175" data-candidate="92259"
                                             data-interview="" data-screening="7882" class="view-candidate-timeline">
                                             Timeline
-                                        </a></td>
-                                    <td><a title="Share Timeline" href="javascript:void(0)" data-toggle="modal"
-                                            data-target="#timelineSharewModal_1" class="text-done">Share</a>
-                                        <div id="timelineSharewModal_1" tabindex="-1" role="dialog"
-                                            aria-labelledby="interviewReviewModalLabel_1" aria-hidden="true"
-                                            class="modal fade">
-                                            <div role="document" class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 id="exampleModalLabel" class="modal-title">Share</h5>
-                                                        <button type="button" data-dismiss="modal" aria-label="Close"
-                                                            class="close"><span aria-hidden="true">×</span></button>
-                                                    </div>
-                                                    <form method="POST" id="store_interview_review"
-                                                        action="https://hire.enablex.io/share/candidate/92259/campaign/175/timeline">
-                                                        <input type="hidden" name="_token"
-                                                            value="pYsv90FZYT00EVcwVvgdN9qvnW4Ldr58ixSqvnD3">
-                                                        <div class="modal-body">
-                                                            <div class="col-md-12">
-                                                                <div class="form-group post-job-form"><label
-                                                                        for="first_name"
-                                                                        class="col-form-label text-md-right font-weight-semibold">First
-                                                                        Name<span>*</span></label> <input
-                                                                        id="first_name" type="text" name="first_name"
-                                                                        value="" required="required"
-                                                                        autofocus="autofocus"
-                                                                        placeholder="Enter First Name"
-                                                                        aria-required="true" class="form-control"></div>
-                                                                <div class="form-group post-job-form"><label
-                                                                        for="last_name"
-                                                                        class="col-form-label text-md-right font-weight-semibold">Last
-                                                                        Name<span>*</span></label> <input id="last_name"
-                                                                        type="text" name="last_name" value=""
-                                                                        required="required" autocomplete="campaign"
-                                                                        autofocus="autofocus"
-                                                                        placeholder="Enter Last Name"
-                                                                        aria-required="true" class="form-control"></div>
-                                                                <div class="form-group post-job-form"><label for="email"
-                                                                        class="col-form-label text-md-right font-weight-semibold">Email<span>*</span></label>
-                                                                    <input id="email" type="email" name="email" value=""
-                                                                        required="required" autocomplete="campaign"
-                                                                        autofocus="autofocus"
-                                                                        placeholder="Enter Email Address"
-                                                                        aria-required="true" class="form-control"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer"><button type="submit"
-                                                                class="btn btn-primary">Share</button></div>
-                                                    </form>
+                                        </a>
+                                    </td>
+
+                                    <td>
+
+
+                                        <ng-template #content1 let-modal>
+                                            <div class="modal-header">
+                                                <h4 class="title">Share</h4>
+                                                <!-- <a href="">
+                                                        <h4 class="title1">Post FeedBack ?</h4>
+                                                    </a> -->
+
+                                                <button type="button" class="btn-close" aria-label="Close"
+                                                    (click)="modal.dismiss('Cross click')"></button>
+                                            </div>
+
+                                            <div class="modal-body ">
+                                                <div class="row">
+                                                <div class="div col-12">
+                                                    <mat-form-field appearance="outline" style="width: 100%;">
+                                                        <mat-label for="">First Name</mat-label>
+                                                        <input matInput type="text" >
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="div col-12">
+                                                    <mat-form-field appearance="outline" style="width: 100%;">
+                                                        <mat-label for="">Last Name</mat-label>
+                                                        <input matInput type="text" >
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="div col-12">
+                                                    <mat-form-field appearance="outline" style="width: 100%;">
+                                                        <mat-label for="">Email</mat-label>
+                                                        <input matInput type="email" >
+                                                    </mat-form-field>
                                                 </div>
                                             </div>
-                                        </div>
+
+
+
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button mat-raised-button type="button"
+                                                    (click)="modal.close('Close click')">Share</button>
+
+                                            </div>
+                                        </ng-template>
+                                        <a href="javascript:void(0)"
+                                            (click)="openBackDropCustomClass1(content1)">Share</a>
+
                                     </td>
                                 </tr>
                             </tbody>
@@ -239,84 +327,120 @@
                     </div>
                 </div>
 
+                <div class="title1">
+                    <div id="timeline">
+                        <div class="row mt-0">
+                            <div class="col-md-12">
 
-                <div id="timeline"><div class="row mb-22">
-                    <div class="col-md-12">
-                        <h3 class="font-size-6">Timeline For Position: MEAN STACK Xeedance</h3>
-                        <div class="scroll-table scroll-table-edit">
-                            <div class="timeline-centered timeline-sm">
-                            <article class="timeline-entry">
-                        <div class="timeline-entry-inner">
-                            <time class="timeline-time"><span>Dec 07,2022</span><span>Screening Invited</span></time>
-                            <div class="timeline-icon"><i class="fa fa-paper-plane"></i></div>
-                            <div class="timeline-data">
-                                <p>Invited By : Pervesh </p>
-                            </div>
-                        </div>
-                    </article>
-                        <article class="timeline-entry">
-                            <div class="timeline-entry-inner">
-                                <p class="timeline-data">Face AI Scorecard</p>
-                                <div class="timeline-data  ">
-                                    <table class="table table-bordered mb-0">
+                                <h3 class="font-size-6 ">Timeline For Position: Full Stack Developer</h3>
+                                <div class="scroll-table scroll-table-edit">
+                                    <div class="timeline-centered timeline-sm">
 
-                                        <thead>
-                                            <tr>
-                                                <th>Attention</th><th>Confident</th><th>Interested</th><th>Determined</th><th>Enthusiastic</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr><td>7.4</td><td>0.0</td><td>0.0</td><td>3.6</td><td>1.5</td>
-                                        </tr></tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </article>
-                    <article class="timeline-entry">
-                        <div class="timeline-entry-inner">
-                        <div class="timeline-icon"><i class="fa fa-video"></i></div>
-                            <div class="timeline-data">
-                                <p> Recording Date : Dec 07, 2022 12:38 PM</p>
-                                <p> Duration : 00:03:22</p>
-                                <div class="download-screening  mt-2 mb-2">
-                                    <a href="javascript:void(0)" class="mr-2" data-link="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4" title="Video available to play." data-toggle="modal" data-target="#video_screening_timeline">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                    <a href="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4" class="inner-screen-download" title="Download this recording file" download="">
-                                        <i class="fa fa-download"></i>
-                                    </a>
-                                    <div class="modal fade screening_timeline_video_modal" id="video_screening_timeline" tabindex="-1" role="dialog" aria-labelledby="video_screening_timelineLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <span><img class="modal_logo" src="https://hire.enablex.io/images/logo.png"></span>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">×</span>
-                                                    </button>
+                                        <article class="timeline-entry">
+                                            <div class="timeline-entry-inner">
+                                                <time class="timeline-time">
+                                                    <span>Dec 07,2022</span>
+                                                    <span>Screening Invited</span></time>
+
+                                                <div class="timeline-icon">
+                                                    <i class="fa fa-paper-plane"></i>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <video width="100%" height="100%" controls="">
-                                                        <source src="https://portal.enablex.io/rwrecordings/IN/westindia/recordings/6315914135a2665fcd708d25/6315950d5d38174a554b6e33/2022/12/63908933e39607cde4d39a48/744417002692/live_744417002692_1.MP4" type="video/mp4">
-                                                    </video>
+
+                                                <div class="timeline-data">
+                                                    <p>Invited By : Abhishek </p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </article>
+
+                                        <article class="timeline-entry timeline-centered1">
+                                            <div class="timeline-entry-inner ">
+                                                <p class="timeline-data">Face AI Scorecard</p>
+                                                <div class="timeline-data  ">
+                                                    <table class="table table-bordered mb-0">
+
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Attention</th>
+                                                                <th>Confident</th>
+                                                                <th>Interested</th>
+                                                                <th>Determined</th>
+                                                                <th>Enthusiastic</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>7.4</td>
+                                                                <td>0.0</td>
+                                                                <td>0.0</td>
+                                                                <td>3.6</td>
+                                                                <td>1.5</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <article class="timeline-entry timeline-centered2">
+                                            <div class="timeline-entry-inner ">
+                                                <div class="timeline-icon ">
+                                                    <i class="fa fa-video-camera"></i>
+                                                </div>
+
+                                                <div class="timeline-data">
+                                                    <p> Recording Date : Dec 07, 2022 12:38 PM</p>
+                                                    <p> Duration : 00:03:22</p>
+                                                    <div class="download-screening  mt-2 mb-2">
+                                                        <a href="javascript:void(0)" class="mr-2" data-link=""
+                                                            href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat"
+                                                            target="_blank" title="Video available to play."
+                                                            data-toggle="modal" data-target="#video_screening_timeline">
+                                                            <i class="fa fa-play"></i>
+                                                        </a>
+                                                        <a href="" class="inner-screen-download"
+                                                            title="Download this recording file" download="">
+                                                            <i class="fa fa-download"></i>
+                                                        </a>
+                                                        <div class="modal fade screening_timeline_video_modal"
+                                                            id="video_screening_timeline" tabindex="-1" role="dialog"
+                                                            aria-labelledby="video_screening_timelineLabel"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <span><img class="modal_logo"
+                                                                                src="https://hire.enablex.io/images/logo.png"></span>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <video width="100%" height="100%" controls="">
+                                                                            <source src="" type="video/mp4">
+                                                                        </video>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </article> <div class="timeline-entry"><div class="timeline-entry-inner"><div class="timeline-data"><div class="review mb-5"><a title="Post Screening Feedback" data-id="7882" data-candidate="92259" data-toggle="modal" href="javascript:void(0);" class="mb-2 mr-4 screeningviewreview">
-            <button type="button" class="btn btn-labeled "><span class="btn-label label-external"><i class="fa fa-comments-o"></i></span>Post Feedback</button>
-            </a></div></div></div></div>
-                            </div>
-                        </div>
                     </div>
-                </div></div>
+                </div>
 
-                <!-- </div> -->
             </div>
         </div>
+
     </mat-drawer-content>
 
 
 </mat-drawer-container>
+<app-footer></app-footer>

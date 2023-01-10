@@ -94,7 +94,7 @@
                         <tr *ngFor="let u of locationList   let i = index ">
                             <td>{{i+1}}</td>
                             <td>
-                                <a routerLink="/candidate" title="Position Profile" style="color: #3490dc;
+                                <a routerLink="/candidateProfile" title="Position Profile" style="color: #3490dc;
                                     text-decoration: none;
                                     background-color: transparent"> AnkitSrivastava </a>
                             </td>
@@ -160,9 +160,9 @@
                             <td>
                                 <button mat-raised-button [matMenuTriggerFor]="menu">Action</button>
                                 <mat-menu #menu="matMenu">
-                                    <button mat-menu-item>Delete Invite</button>
-                                    <button mat-menu-item> Re-Invite</button>
-                                    <button mat-menu-item> Interview-Invite</button>
+                                    <button mat-menu-item id="del" (click)="delete(u)">Delete Invite</button>
+                                    <button mat-menu-item (click)="alertConfirmation()"> Re-Invite</button>
+                                    <button mat-menu-item routerLink="/profileInvite"> Interview-Invite</button>
                                 </mat-menu>
                             </td>
 

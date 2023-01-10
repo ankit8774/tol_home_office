@@ -1,117 +1,85 @@
-.mat-form-field {
-  width: 90%;
-  /* margin: 10px; */
+/* .mat-form-field {
+  width: 90%; 
   display: block;
   margin-left: 5%;
   border: none;
   margin-top: 5%;
-  /* margin-bottom: -18px */
+} */
 
-
-}
-
-.mat-dialog-title {
+/* .mat-dialog-title {
   color: darkgray;
   margin-left: 5%;
-}
+} */
 
-.mat-raised-button {
+/* .mat-raised-button {
   margin-bottom: 10px;
   margin-left: 5%;
-}
+} */
 
 
 
 
-mat-drawer {
+/* mat-drawer {
   width: 255px;
-  /* background-color: rgb(220, 220, 248); */
   margin-top: 0px;
-}
+} */
 
-mat-drawer-container {
+/* mat-drawer-container {
   height: 91%;
   background-color: #F6F9FA;
 
-}
+} */
 
-mat-drawer-content {
+/* mat-drawer-content {
   overflow-x: hidden;
-  /* overflow-y: hidden; */
-}
+} */
 
 
 
-/* .mat-divider {
-    border-top-width: 3px;
-    border-color: antiquewhite;
-  }
-  
-  .mat-list-item {
-    color: white !important;
-    font-size: 0.8rem;
-    height: 44px !important;
-    margin-bottom: 4px;
-    border-radius: 5px;
-    margin: 0 8px;
-  
-  } */
-
-/* .mat-list-item:hover {
-    background: #025353 !important;
-    font-family: 'lato';
-  } */
 
 
-.form-control {
+
+/* .form-control {
   border: 0px;
   font-family: 'lato';
-  /* width: 100%; */
-  /* display: block; */
-}
+} */
 
 
-
-.mat-raised-button {
+/* .mat-raised-button {
   background: #ed4544;
-  /* box-shadow: 5px 5px 12px rgb(30, 30, 30); */
   color: white;
   font-family: 'lato';
-}
+} */
 
-table tr th {
+/* table tr th td{
   border: 1px;
   width: 100%;
-}
-table{
-  /* margin-left: 10px; */
- 
+} */
+
+/* table{ 
   width: 100%;
-  border:1px solid rgb(214, 208, 208);
- 
-  
-}
-table tr td {
+  border:1px solid rgb(214, 208, 208);  
+} */
+
+/* table tr td {
   border: 1px;
   width: 100%;
-}
-.padd_colx5 {
+} */
+
+/* .padd_colx5 {
   padding: 0px 5px;
-}
+} */
 
 
-.shadow-4 {
+/* .shadow-4 {
   margin-left: 25px;
   height: 98.5%;
   width: 650px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* text-align: center; */
+ 
   border-radius: 10px;
-  /* align-items: center; */
   margin-top: 15px;
   background: white;
-
-
 }
 
 .shadow-5 {
@@ -119,73 +87,70 @@ table tr td {
   height: 580px;
   width: 350px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* text-align: center; */
-  border-radius: 10px;
-  /* align-items: center; */
+  
+  border-radius: 10px; 
   margin-top: 15px;
   margin-left: -35px;
   background: white;
-}
+} */
 
 
 
-.sub-title {
+/* .sub-title {
   margin-top: 25px;
-  /* font-weight: bold; */
-  /* position: relative; */
   justify-content: space-between;
   display: flex;
   margin-left: 4px;
   font-weight: bold;
-}
+} */
 
 
-.text {
+/* .text {
   font-size: 50px;
   font-family: sans-serif;
   font-weight: bold;
   margin-left: 12px;
-}
+} */
 
-.text h5 {
+/* .text h5 {
   font-size: 18px;
   font-family: sans-serif;
   font-weight: 500;
   margin-top: 2px;
-}
+} */
 
-h4 {
+/* h4 {
   font-weight: bold;
-}
+} */
 
-h5 {
+/* h5 {
   font-weight: 500;
   font-size: 18px;
-}
+} */
 
 
-.pt-9[_ngcontent-hjo-c213],
+/* .pt-9[_ngcontent-hjo-c213],
 .py-9[_ngcontent-hjo-c213] {
   padding-top: 4px !important;
-}
+} */
 
 
-.media {
+/* .media {
   display: flex;
   align-items: center;
-}
+} */
 
 
 
 
-.mr-7,
+/* .mr-7,
 .mx-7 {
   margin-right: 1.25rem !important;
-}
+} */
 
 
 
-.btn-outline-mercury {
+/* .btn-outline-mercury {
   border-color: #e5e5e5 !important;
   border: 1px solid #e5e5e5 !important;
   background: none !important;
@@ -195,21 +160,22 @@ h5 {
   background-color: #ed4544 !important;
   color: rgb(253, 252, 252) !important;
   margin: 3px;
-}
+} */
 
-.p-20 {
+/* .p-20 {
   padding: 20px;
  
-}
-.text-center {
+} */
+
+/* .text-center {
   text-align: center !important;
-}
+} */
 
-.border-bottom {
+/* .border-bottom {
   border-bottom: 1px solid #dee2e6 !important;
-}
+} */
 
-.circle-56 {
+/* .circle-56 {
   max-width: 45px;
   min-width: 45px;
   max-height: 45px;
@@ -220,21 +186,21 @@ h5 {
   justify-content: center;
   margin: auto;
   background: 0% 0%;
-}
+} */
 
-.bg-blue-opacity-1 {
+/* .bg-blue-opacity-1 {
   background-color: rgba(71, 67, 219, 0.1);
-}
+} */
 
-a {
+/* a {
   color: #3490dc;
   text-decoration: none;
   background-color: transparent;
-}
+} */
 
 
 
-.pt-9,
+/* .pt-9,
 .py-9 {
   padding-top: 20px !important;
-}
+} */

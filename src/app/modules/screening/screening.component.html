@@ -1,0 +1,227 @@
+<!-- <ngx-loading [show]="loading"></ngx-loading> -->
+<mat-drawer-container>
+  <mat-drawer mode="side" opened="true">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header></app-header>
+
+
+    <div class="main-content">
+      <!-- <div class="row">
+  
+        <div class="title">
+          <h3>Position (6)</h3>
+          <h2>Welcome to Enablex Hire!</h2>
+        </div>
+  
+      </div> -->
+
+      <div class="row sub-title">
+        <div class="col-md-6 text">
+          <h5> This is a list of all Positions created in your Organisation.</h5>
+        </div>
+
+      </div>
+
+      <div class="row s-0">
+
+        <div class="col-md-2">
+          <mat-form-field appearance="outline">
+            <mat-label>Position</mat-label>
+            <mat-select name="businessId" id="businessId">
+              <input matInput type="search" class="myInput">
+
+
+              <mat-option value="a1">--All Position--</mat-option>
+              <mat-option value="" *ngFor="let pos of position">{{pos}}</mat-option>
+
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-2 ">
+          <mat-form-field appearance="outline">
+            <mat-label> Status </mat-label>
+            <mat-select name="locationName" id="locationName">
+              <input matInput type="search" class="myInput">
+              <mat-option value="a">--All--</mat-option>
+              <mat-option value="" *ngFor="let status of status">{{status}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-2">
+          <mat-form-field appearance="outline">
+            <mat-label>From</mat-label>
+            <input matInput type="date" style="border: 0;">
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-2">
+          <mat-form-field appearance="outline">
+            <mat-label>To</mat-label>
+            <input matInput type="date">
+          </mat-form-field>
+        </div>
+
+
+        <div class="col-md-2 my-1  ">
+          <button class="go" mat-raised-button>Go</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row sub-title">
+      <div class="col-md-6 text">
+        <h5 style="margin-left: 18px;">Total: 7</h5>
+      </div>
+    </div>
+
+    <!-- <p><b>Total : 7</b></p> -->
+
+    <div class="col-12 padd_colx5 pad_20">
+      <div class="table-responsive">
+
+        <table class="table table-striped">
+          <colgroup>
+            <!-- <col style="width: 20%;">
+                <col style="width: 20%;">
+                <col style="width: 20%;">
+                <col style="width: 20%;">
+                <col style="width: 20%;"> -->
+          </colgroup>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Position</th>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Rec</th>
+              <th>Rec. Date</th>
+              <!-- <th>Interview</th> -->
+              <!-- <th> </th> -->
+            </tr>
+          </thead>
+
+          <tbody #empty>
+            <!-- <ng-container *ngIf="( locationList ) as result"> -->
+
+            <tr *ngFor="let pos of locationList  let i = index">
+
+              <td>{{i+1}}</td>
+
+              <td>
+                <a routerLink="/profilePosition" title="Position Profile"> .Net</a>
+              </td>
+
+              <td> <a routerLink="/candidateProfile" title="Ankit">Ankit Srivastava</a> </td>
+
+              <td>
+                <ng-template #content let-modal>
+                  <div class="modal-header">
+                    <h4 class="title1">Screening Feedback (0)</h4>
+                    <!-- <a href="">
+                                  <h4 class="title1">Post FeedBack ?</h4>
+                              </a> -->
+
+                    <button type="button" class="btn-close" aria-label="Close"
+                      (click)="modal.dismiss('Cross click')"></button>
+                  </div>
+
+                  <div class="modal-body ">
+                    <p>FeedBack Date : Dec 16,2022</p>
+
+                    <ngb-rating [(rate)]="currentRate"></ngb-rating>
+                    <br> <br>
+
+                    <p>Recommend:</p>
+
+                    <mat-form-field appearance="outline" class="col-md-12">
+                      <!-- <mat-label>Select</mat-label> -->
+                      <mat-select placeholder="Select">
+                        <!-- <mat-option value="Sl"></mat-option> -->
+                        <mat-option value="Sl">Shortlist</mat-option>
+                        <mat-option value="Hold">Hold</mat-option>
+                        <mat-option value="reject">Reject</mat-option>
+
+                      </mat-select>
+                    </mat-form-field>
+
+
+                    <p>Comment :</p>
+                    <mat-form-field appearance="outline" class="col-md-12">
+
+                      <textarea matInput type="text" placeholder="Your Feedback Here"></textarea>
+                    </mat-form-field>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button mat-raised-button type="button" (click)="modal.close('Close click')">Submit
+                      Feedback</button> &nbsp;
+                    <button mat-raised-button type="button" (click)="modal.close('Close click')">Submit & Close</button>
+
+                  </div>
+                </ng-template>
+
+                <a title="Position Profile" style="color: #3490dc; text-decoration: none; 
+                      background-color: transparent; cursor:pointer"
+                  (click)="openBackDropCustomClass(content)">Feedback Pending</a>
+              </td>
+
+
+              <td class="p-20 rounded mb-4 dashboard-screen">
+                <!-- <a href="javascript:void(0)" data-link="" data-toggle="modal" data-target="#video_2" class="mr-2">
+                  <i class="fa fa-play"></i>
+
+                </a>
+                <a title="Download this recording file" download="" class="inner-screen-download"><i
+                  class="fa fa-download"></i></a> -->
+
+                <div class="download-screening">
+                  <a href="https://www.youtube.com/watch?v=bC6YnoJnjSY&ab_channel=ArvindSinghPemawat" data-link="1.MP4"
+                    target="_blank" data-toggle="modal" data-target="#video_1" class="mr-2">
+                    <i class="fa fa-play"></i>
+                  </a>
+
+                  <div id="video_1" tabindex="-1" role="dialog" aria-labelledby="video_1Label" aria-hidden="true"
+                    class="modal fade">
+                    <div role="document" class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <!-- <div class="modal-header">
+                                <h3><a>Sudhanshu
+                                    </a></h3> <button type="button" data-dismiss="modal" aria-label="Close"
+                                    class="close"><span aria-hidden="true">×</span></button>
+                            </div>
+                            <div class="modal-body"><video width="100%" height="100%" controls="controls">
+                                    <source src="" type="video/mp4">
+                                </video>
+                              </div>-->
+                      </div>
+                    </div>
+                  </div> 
+                  <a title="Download this recording file" href=""  class="inner-screen-download" download="">
+                    <i class="fa fa-download"></i>
+                  </a>
+                </div>
+              </td>
+
+              <td>Dec 07, 2022</td>
+
+
+              <!-- </ng-container> -->
+
+          </tbody>
+
+        </table>
+
+        <pagination-controls class="custom-pagination" (pageChange)="pageChangeEvent($event)">
+        </pagination-controls>
+
+      </div>
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+<app-footer></app-footer>

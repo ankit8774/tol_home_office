@@ -1,0 +1,264 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header></app-header>
+
+        <div class="row sub-title">
+            <div class="col-md-8 text">
+                <h5>Use this template to edit the Candidate Flow for the assessment process. You can set time frames,
+                    the position Description, Components of Assessment and Questions for the Self-Recorded Screening
+                    assessment.</h5>
+            </div>
+        </div>
+
+
+        <div class="shadow-4 ml-2">
+            <form #addCustomerForm="ngForm">
+
+                <div class="row mx-0">
+                    <div class="col-md-6">
+
+                        <mat-form-field appearance="outline">
+                            <mat-label> Position Name</mat-label>
+                            <input matInput id="firstName" name="firstName" class="form-control" #position='ngModel'
+                                ngModel required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label> Assign To</mat-label>
+                            <mat-select id="" name="lastName" placeholder="Select Executive" required>
+                                <mat-option value="1">Exe-1</mat-option>
+                                <mat-option value="2">Exe-2</mat-option>
+                                <mat-option value="3">Exe-3</mat-option>
+                                <mat-option value="4">Exe-4</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <!-- <input id="first_name" type="text" placeholder="First Name" name="first_name" value=""
+                        required="required" autocomplete="first_name" autofocus="autofocus" class="form-control"
+                        aria-required="true"> -->
+                    </div>
+                </div>
+
+                <div class="row mx-0">
+
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Group </mat-label>
+                            <input matInput id="Password" class="form-control" name="Password" required>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-6">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label> Hiring For Client </mat-label>
+                            <mat-select id="lastName" name="lastName" placeholder="Select Client" required>
+                                <mat-option value="1">client-1</mat-option>
+                                <mat-option value="2">client-2</mat-option>
+                                <mat-option value="3">client-3</mat-option>
+                                <mat-option value="4">client-4</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+
+                </div>
+
+                <div class="row mx-0">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Position Description</mat-label>
+                        <textarea matInput
+                            placeholder="Please enter the position description for the position that will be visible to the candidate"></textarea>
+                    </mat-form-field>
+                </div>
+
+                <div class="row mx-0">
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Start Date</mat-label>
+                            <input matInput type="date" placeholder="MM/DD/YYYY">
+                            <!-- <mat-datepicker-toggle matIconSuffix [for]="picker">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker> -->
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline" style="height: 5px;">
+
+                            <mat-label>End date</mat-label>
+                            <input matInput type="date" placeholder="MM/DD/YYYY">
+                            <!-- <mat-datepicker-toggle matIconSuffix [for]="picker1">
+                            </mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker> -->
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="row mx-0">
+                    <section class="example-section" [formGroup]="assessment">
+                        <h4>Select Components of Assessment Process </h4>
+                        <p>
+                            <mat-checkbox formControlName="ScreeningTest">Screening Test</mat-checkbox>
+                        </p>
+                        <p>
+                            <mat-checkbox formControlName="DirectInterviewInvites">Direct Interview Invites
+                            </mat-checkbox>
+                        </p>
+                        <!-- <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p> -->
+                    </section>
+
+                </div>
+
+
+
+                <div class=" row mx-0 questions" style="display: block;">
+                    <h4>Screening Test Setup</h4>
+                    <hr>
+                    <div class="form-group"><label for="instructions" class="col-form-label text-md-right">Instruction
+                            for
+                            Candidate</label>
+                        <p><i>Please provide instructions for the Candidates to self-record their Screening
+                                Assessment. You can include instructions on position, lighting, language etc as
+                                required. These instructions will be displayed to the Candidate during the
+                                Screening
+                                process. You can edit these by clicking below.</i></p>
+                        <mat-form-field appearance="outline">
+                            <textarea matInput id="instructions" name="instructions"
+                                placeholder="Instructions for Candidates" aria-required="true" required="">
+1. Please ensure you are in a well lit space and your face is clearly visible on the camera.
+2. Please ensure you have good internet connectivity on your phone/laptop before you initiate the process.
+3. Please speak clearly and sufficiently loudly to ensure your voice is recorded properly.
+4. Please follow instructions on the screen properly.
+5. Press the STOP button only after completing ALL questions. Once you press STOP you cannot go back.
+6. Questions will appear on screen. Start answering after reading the question.
+7. There is a time limit for each question. Please be mindful of that.</textarea>
+                        </mat-form-field>
+                    </div>
+                    <div><i>Enter the questions you want the candidates to answer during the Self-Recorded
+                            Screening.</i>
+                        <ul style="margin-left: 40px;">
+                            <li><i>Please keep questions short and direct for displaying on-screen.</i></li>
+                            <li><i>Enter the amount of time you wish to give the Candidate to record their
+                                    response
+                                    (in seconds) before the next question appears.</i></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label for="question[]" class="col-form-label text-md-right">Question
+                                    1</label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput id="question_0" name="question[916]"
+                                        value="Q1. Tell us something about yourself, specifically talking about your professional experience."
+                                        class="form-control" required>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4"><label for="time_916" class="col-form-label text-md-right">Answer Time
+                                    (In Seconds)</label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput type="number" id="time_916" name="time[916]" value="60" min="20"
+                                        class="form-control">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-8"><label for="question[]" class="col-form-label text-md-right">Question
+                                    2</label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput id="question_1" name="question[917]"
+                                        value="Please tell us about your technical expertise and key features/aspects you have used in your projects."
+                                        class="form-control">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-4"><label for="time_917" class="col-form-label text-md-right">Answer Time
+                                    (In Seconds)</label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput type="number" id="time_917" name="time[917]" value="60" min="20"
+                                        class="form-control">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-8"><label for="question[]" class="col-form-label text-md-right">Question
+                                    3</label>
+                                <mat-form-field appearance="outline">
+                                    <input matInput id="question_2" name="question[918]"
+                                        value="Tell us something about your most challenging project. What was your specific contribution to that?"
+                                        class="form-control">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4"><label for="time_918" class="col-form-label text-md-right">Answer Time
+                                    (In Seconds)</label>
+                                    <mat-form-field appearance="outline">
+                                    <input matInput type="number" id="time_918" name="time[918]" value="60"
+                                    min="20" class="form-control">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-8"><label for="question[]" class="col-form-label text-md-right">Question
+                                    4</label> 
+                                    <mat-form-field appearance="outline">
+                                    <input matInput id="question_3" name="question[919]" value="" class="form-control">
+                                    </mat-form-field>
+
+                                    </div>
+                            <div class="col-md-4"><label for="time_919" class="col-form-label text-md-right">Answer Time
+                                    (In Seconds)</label> 
+                                    <mat-form-field appearance="outline">
+                                    <input matInput type="number" id="time_919" name="time[919]" value="20"
+                                    min="20" class="form-control">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-8"><label for="question[]" class="col-form-label text-md-right">Question
+                                    5</label> 
+                                    <mat-form-field appearance="outline">
+                                    <input matInput id="question_4" name="question[920]" value="" class="form-control">
+                            </mat-form-field>
+                        </div>
+                            <div class="col-md-4"><label for="time_920" class="col-form-label text-md-right">Answer Time
+                                    (In Seconds)</label>
+                                    <mat-form-field appearance="outline">
+                                        <input matInput type="number" id="time_920" name="time[920]" value="20"
+                                    min="20" class="form-control">
+
+                                    </mat-form-field>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <div class="row mx-0">
+                <div class="col-md-3">
+                    <button mat-raised-button color="primary" [disabled]="addCustomerForm.invalid">Submit
+                        <!-- <span *ngIf="!addUserParams.userDetailsId">Submit </span> -->
+                        <!-- <span *ngIf="addUserParams.userDetailsId">Update </span> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- <span *ngIf="addUserParams.businessId">Update</span></button> -->
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

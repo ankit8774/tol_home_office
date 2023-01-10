@@ -3,8 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesService } from 'src/app/shared/services.service';
-
-// import { MatSnackBar } from '@angular/material';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -13,41 +12,55 @@ import { ServicesService } from 'src/app/shared/services.service';
   styleUrls: ['./screening-invitee.component.css'],
   // encapsulation: ViewEncapsulation.Emulated,
 
-  // standalone: true,
-	// imports: [NgbRatingModule],
 
 })
 
 export class ScreeningInviteeComponent implements OnInit {
 
-  // @Input('rating') public rating: number = 3;
-  // @Input('starCount') public starCount: number = 5;
-  // @Input('color') public color: string = 'accent';
-  // @Output() public ratingUpdated = new EventEmitter();
-
-  // public snackBarDuration: number = 2000;
-  // public ratingArr = [];
 
   currentRate = 2;
 
-  closeResult:any
+  closeResult: any
 
-  locationList=[1,2]
-  searchText:any
-  loading:any
-  
-  constructor(private modalService: NgbModal,private headerTitleService:ServicesService , private snackBar:MatSnackBar) { }
+  locationList = [1, 2]
+  searchText: any
+  loading: any
+
+  constructor(private modalService: NgbModal, private headerTitleService: ServicesService, private snackBar: MatSnackBar) { }
+
+
+  alertConfirmation() {
+    Swal.fire({
+      title: 'Re-Invite will erase previous data?',
+
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'OK',
+      cancelButtonText: 'Cancel',
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire('Re-Invite!', 'Candidate ReInvite Successfull.', 'success');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', '', 'error');
+      }
+    });
+  }
+
 
 
   openBackDropCustomClass(content: any) {
-		this.modalService.open(content, { backdropClass: 'light-blue-backdrop' });
-	}
+    this.modalService.open(content, { backdropClass: 'light-blue-backdrop' });
+  }
 
-  
+  delete(u: any) {
+    const i = this.locationList.indexOf(u)
+    this.locationList.splice(i, 1)
+  }
+
   ngOnInit(): void {
     this.headerTitleService.setTitle('Full Stack Developer')
 
-  
+
   }
 
 }
