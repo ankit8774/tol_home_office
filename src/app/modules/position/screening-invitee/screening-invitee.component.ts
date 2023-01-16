@@ -19,7 +19,7 @@ export class ScreeningInviteeComponent implements OnInit {
 
 
   currentRate = 2;
-
+p:any
   closeResult: any
 
   locationList = [1, 2]
