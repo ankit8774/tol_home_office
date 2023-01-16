@@ -9,18 +9,17 @@
         <div class="shadow-4">
             <form #addCustomerForm="ngForm">
 
-                <div class="row mx-0">
-                <div class="col-md-6">
-
-                        <mat-form-field appearance="outline">
+                <div class="row mt-6">
+                    <div class="col-md-6 mt-4">
+                        <mat-form-field appearance="outline" style="width: 90%; margin-left: 40px;">
                             <mat-label> Position Name</mat-label>
                             <input matInput id="firstName" name="firstName" class="form-control" #position='ngModel'
                                 ngModel required>
                         </mat-form-field>
                     </div>
 
-                    <div class="col-md-6">
-                        <mat-form-field appearance="outline">
+                    <div class="col-md-6 mt-4">
+                        <mat-form-field appearance="outline" style="width: 90%; margin-right: 10px;">
                             <mat-label> Assign To</mat-label>
                             <mat-select id="" name="lastName" placeholder="Select Executive" required>
                                 <mat-option value="1">Exe-1</mat-option>
@@ -36,17 +35,17 @@
                     </div>
                 </div>
 
-                <div class="row mx-0">
+                <div class="row ">
 
                     <div class="col-md-6">
-                        <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-form-field class="example-full-width" appearance="outline" style="width: 90%; margin-left: 40px;">
                             <mat-label> Group </mat-label>
-                            <input matInput id="Password" class="form-control" name="Password" required>
+                            <input matInput id=""  class="form-control" name="" required>
                         </mat-form-field>
                     </div>
 
                     <div class="col-md-6">
-                        <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-form-field class="example-full-width" appearance="outline" style="width: 90%; margin-right: 10px;">
                             <mat-label> Hiring For Client </mat-label>
                             <mat-select id="lastName" name="lastName" placeholder="Select Client" required>
                                 <mat-option value="1">client-1</mat-option>
@@ -60,40 +59,35 @@
 
                 </div>
 
-                <div class="row mx-0">
-                    <mat-form-field appearance="outline">
+                <div class="row ">
+                    <div class="col-md-11">
+                    <mat-form-field appearance="outline" style=" margin-left: 40px;">
                         <mat-label>Position Description</mat-label>
                         <textarea matInput
                             placeholder="Please enter the position description for the position that will be visible to the candidate"></textarea>
                     </mat-form-field>
                 </div>
+                </div>
 
-                <div class="row mx-0">
+                <div class="row ">
                     <div class="col-md-6">
-                        <mat-form-field appearance="outline">
+                        <mat-form-field appearance="outline" style="width: 90%; margin-left: 40px;">
                             <mat-label>Start Date</mat-label>
                             <input matInput type="date" placeholder="MM/DD/YYYY">
-                            <!-- <mat-datepicker-toggle matIconSuffix [for]="picker">
-                            </mat-datepicker-toggle>
-                            <mat-datepicker #picker></mat-datepicker> -->
                         </mat-form-field>
-
                     </div>
 
                     <div class="col-md-6">
-                        <mat-form-field appearance="outline" style="height: 5px;">
-
+                        <mat-form-field appearance="outline" style="width: 90%; margin-right: 10px;">
                             <mat-label>End date</mat-label>
                             <input matInput type="date" placeholder="MM/DD/YYYY">
-                            <!-- <mat-datepicker-toggle matIconSuffix [for]="picker1">
-                            </mat-datepicker-toggle>
-                            <mat-datepicker #picker1></mat-datepicker> -->
+                        
                         </mat-form-field>
 
                     </div>
                 </div>
 
-                <div class="row mx-0">
+                <div class="row " style="margin-left: 30px;">
                     <section class="example-section" [formGroup]="assessment">
                         <h4>Select Components of Assessment Process </h4>
                         <p>
@@ -103,7 +97,7 @@
                             <mat-checkbox formControlName="DirectInterviewInvites">Direct Interview Invites
                             </mat-checkbox>
                         </p>
-                        <!-- <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p> -->
+                     
                     </section>
 
                 </div>
@@ -111,16 +105,14 @@
 
 
             </form>
-            <div class="row mx-0">
-                <div class="col-md-3">
-                    <button mat-raised-button color="primary" [disabled]="addCustomerForm.invalid">Submit
-                        <!-- <span *ngIf="!addUserParams.userDetailsId">Submit </span> -->
-                        <!-- <span *ngIf="addUserParams.userDetailsId">Update </span> -->
+            <div class="row ">
+                <div class="col-md-6" style="margin-left: 40px; margin-bottom: 10px;">
+                    <button mat-raised-button color="primary" [disabled]="addCustomerForm.invalid">Submit                    
                     </button>
                 </div>
             </div>
         </div>
-        <!-- <span *ngIf="addUserParams.businessId">Update</span></button> -->
+
     </mat-drawer-content>
 </mat-drawer-container>
 <app-footer></app-footer>
