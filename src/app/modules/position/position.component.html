@@ -99,7 +99,7 @@
 
   <!-- <p><b>Total : 7</b></p> -->
 
-  <div class="col-12 padd_colx5 pad_20">
+  <div class="col-12 padd_colx5 ">
     <div class="table-responsive">
 
       <table class="table table-striped">
@@ -124,7 +124,7 @@
         </thead>
 
         <tbody #empty>
-          <ng-container *ngIf="( locationList ) as result">
+          <!-- <ng-container *ngIf="( locationList ) as result"> -->
 
             <tr *ngFor="let u of locationList  let i = index">
 
@@ -141,7 +141,7 @@
               <td>Open</td>
               <td>Archive</td>
 
-          </ng-container>
+          <!-- </ng-container> -->
 
         </tbody>
 

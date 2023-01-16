@@ -372,11 +372,12 @@ table {
 
 table tr td {
     border: 1px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     font-size: 13px !important;
-    padding: 10px 20px !important;
+    /* padding: 10px 20px !important; */
     /* width: 100%; */
     /* border:1px solid rgb(214, 208, 208);  */
+    /* text-align: left; */
 }
 
 
@@ -392,6 +393,8 @@ table tr th {
     padding: 15px 20px;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    /* vertical-align: middle; */
+    text-align: left;
 
 }
 
