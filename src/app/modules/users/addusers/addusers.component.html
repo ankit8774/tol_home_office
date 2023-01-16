@@ -18,7 +18,7 @@
             </div> -->
 
 
-            <div class="col-md-11 mt-4 " style="margin-left: 19px;">
+            <div class="col-md-11 mt-2 " style="margin-left: 19px;">
 
                 <a routerLink="/user" class="d-inline-flex align-items-center back text-gray font-weight-bold">
                     <i class="fa fa-angle-left circle-40 bg-white mr-5 left-profile" style="margin-right: 10px;"></i>
@@ -40,7 +40,7 @@
 
                 <div class="row mx-0">
 
-                    <div class="col-md-6  d-grid">
+                    <div class="col-md-6  mt-2">
                         <mat-form-field appearance="outline">
                             <mat-label> First Name</mat-label>
                             <input matInput id="firstName" name="firstName" class="form-control" #firstName='ngModel'
@@ -48,7 +48,7 @@
                         </mat-form-field>
                     </div>
 
-                    <div class="col-md-6  d-grid">
+                    <div class="col-md-6  mt-2">
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label> Last Name</mat-label>
                             <input matInput id="lastName" class="form-control" #lastName='ngModel' name="lastName"
@@ -97,7 +97,7 @@
 
             </form>
             <div class="row mx-0">
-                <div class="col-md-3"   >
+                <div class="col-md-3 mb-3"  >
                     <button mat-raised-button (click)="createUser()"
                         [disabled]="addCustomerForm.invalid">
                         <span *ngIf="!addUserParams.userDetailsId">Submit </span>

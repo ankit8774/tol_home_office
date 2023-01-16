@@ -233,7 +233,7 @@ body {
 mat-drawer-container {
     background-color: #F6F9FA;
     color: rgba(0, 0, 0, .87);
-    height: 90%;
+    height: 90.8%;
 }
 
 mat-drawer {
@@ -366,9 +366,16 @@ table {
 
 .custom-pagination {
     float: right;
-    
 }
-
+.ngx-pagination ul li {
+    
+    border-bottom: 1px solid #f3f3f3;
+  }
+/* 
+  .ngx-pagination a, .ngx-pagination button {
+    display: flex;
+    color: red;
+  } */
 
 table tr td {
     border: 1px;
@@ -445,10 +452,6 @@ table tr th {
 .padd_colx5 {
     padding: 0px 33px;
 }
-
-/* .padd_colx5 {
-  padding: 0px 5px;
-}  */
 
 .p-20 {
     padding: 18px;
@@ -840,4 +843,26 @@ ul li a:hover {
 
 .mat-drawer-inner-container {
     overflow: hidden !important;
+}
+
+
+
+.header {
+    background: darkblue;
+    color: white;
+    height: 50px;
+    font-weight: bold;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+}
+
+
+.header h3,.header h2{
+    
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 25px;
 }

@@ -28,6 +28,9 @@ url:any
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
   
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+}
 
   ngOnInit(): void {
 

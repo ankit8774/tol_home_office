@@ -14,7 +14,7 @@
 
             </div>
         </div>
-        <div class="shadow-4">
+        <div class="shadow-4" style="height: 750px">
             <div class="row ">
                 <div class="title1">
                     <div class="col-md-7">
@@ -266,7 +266,7 @@
 
                                     <td><a title="View Candidate Timeline" data-toggle="tooltip" data-placement="top"
                                             href="javascript:void(0)" data-campaign="175" data-candidate="92259"
-                                            data-interview="" data-screening="7882" class="view-candidate-timeline">
+                                            data-interview="" data-screening="7882" class="view-candidate-timeline" (click)="scroll(target)">
                                             Timeline
                                         </a>
                                     </td>
@@ -328,7 +328,7 @@
                 </div>
 
                 <div class="title1">
-                    <div id="timeline">
+                    <div id="timeline" #target>
                         <div class="row mt-0">
                             <div class="col-md-12">
 

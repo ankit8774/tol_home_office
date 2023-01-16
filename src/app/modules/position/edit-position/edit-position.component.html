@@ -6,7 +6,7 @@
         <app-header></app-header>
 
         <div class="row sub-title">
-            <div class="col-md-8 text">
+            <div class="col-md-10 text">
                 <h5>Use this template to edit the Candidate Flow for the assessment process. You can set time frames,
                     the position Description, Components of Assessment and Questions for the Self-Recorded Screening
                     assessment.</h5>
@@ -17,8 +17,8 @@
         <div class="shadow-4 ml-2">
             <form #addCustomerForm="ngForm">
 
-                <div class="row mx-0">
-                    <div class="col-md-6">
+                <div class="row mx-0 mt-2">
+                    <div class="col-md-6 mt-2">
 
                         <mat-form-field appearance="outline">
                             <mat-label> Position Name</mat-label>
@@ -27,7 +27,7 @@
                         </mat-form-field>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 mt-2">
                         <mat-form-field appearance="outline">
                             <mat-label> Assign To</mat-label>
                             <mat-select id="" name="lastName" placeholder="Select Executive" required>
@@ -130,7 +130,7 @@
                                 Screening
                                 process. You can edit these by clicking below.</i></p>
                         <mat-form-field appearance="outline">
-                            <textarea matInput id="instructions" name="instructions"
+                            <textarea  matInput id="instructions" name="instructions"
                                 placeholder="Instructions for Candidates" aria-required="true" required="">
 1. Please ensure you are in a well lit space and your face is clearly visible on the camera.
 2. Please ensure you have good internet connectivity on your phone/laptop before you initiate the process.
@@ -250,7 +250,7 @@
 
             </form>
             <div class="row mx-0">
-                <div class="col-md-3">
+                <div class="col-md-3 mb-2">
                     <button mat-raised-button color="primary" [disabled]="addCustomerForm.invalid">Submit
                         <!-- <span *ngIf="!addUserParams.userDetailsId">Submit </span> -->
                         <!-- <span *ngIf="addUserParams.userDetailsId">Update </span> -->
